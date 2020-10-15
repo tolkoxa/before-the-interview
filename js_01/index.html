@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Write string preparation function, which fill template in with data from specified object
+
+         * Data object
+         * user: {
+         * id: 20
+         * type_id: 'test'
+         * }
+         *
+         * Template: /api/items/%id%/%type_id%
+         * Expected result: /api/items/20/test
+         */
+        const user = {
+            id: 20,
+            name: "John Dow",
+            role: "QA",
+            salary: 100
+        };
+        const apiTemplatesSet1 = [
+            "/api/items/%id%/%name%",
+            "/api/items/%id%/%role%",
+            "/api/items/%id%/%salary%"
+        ];
+        const apiPathes = apiTemplatesSet1.map(apiPathTemplate => {
+            return getApiPath(user, apiPathTemplate);
+        });
+
+        function getApiPath(obj, template) {
+            let dataMask = /\w+(?=%)/gm;
+            let firstMask = /[\/\w+\/]*/;
+            let dataArr = template.match(dataMask);
+            let strStart = template.match(firstMask).join();
+            let strData = '';
+            dataArr.forEach((value, index) => {
+
+                let valData = obj[`${value}`];
+                (String(valData).search(/\s/) != -1) ? valData = valData.replace(/\s/, "%20"): valData = valData;
+
+                strData = strData + valData;
+                index + 1 == dataArr.length ? strData = strData : strData = strData + `/`;
+                return strData;
+            });
+
+            let result = strStart + strData;
+            return result;
+        }
+        console.log(JSON.stringify(apiPathes));
+
+        /* expected:
+         ["/api/items/20/John%20Dow","/api/items/20/QA","/api/items/20/100"]
+        */
+    </script>
+</body>
+
+</html>

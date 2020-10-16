@@ -7,35 +7,67 @@ body {
     font-size: 10px;
 }
 
-.test__wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .container {
-    // min-width: 320px;
-    // width: 100%;
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    overflow: hidden;
 }
 
-.header__style {
+.header {
+    &__style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__imgs {
+        position: relative;
+    }
+    &__data {
+        padding: 68px 0 0 0;
+    }
+}
+
+.lines__top {
+    width: 100%;
+    height: 165px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
     position: relative;
-    height: 305px;
+}
+
+.lines_bg_white {
+    width: 90px;
+    height: 100%;
+    background-color: $color_white;
 }
 
 .lines__move {
     width: 100%;
-    height: 170px;
-    background-image: url(../img/lines_top.png);
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: auto;
+    height: 100%;
+    background-color: $color_white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: rotate(-45deg);
+    top: 70px;
     position: absolute;
-    top: 0;
-    z-index: 1;
+}
+
+.line_black {
+    width: 40px;
+    height: 100%;
+    margin: 0 0 0 40px;
+    background-color: $color_black;
+    color: $color_white;
+    position: absolute;
+    left: -200px;
 }
 
 .conf7__bg {
@@ -49,9 +81,9 @@ body {
     background-position: top right;
     background-repeat: no-repeat;
     background-size: auto;
-    position: absolute;
     top: 60px;
-    z-index: 10;
+    z-index: 2;
+    position: absolute;
 }
 
 .about {
@@ -63,8 +95,7 @@ body {
         font-size: 2.8rem;
         font-weight: 700;
         line-height: 120%;
-        margin: 0 0 0 0;
-        padding: 0 0 20px 0;
+        padding: 37px 0 20px 0;
     }
     &__text {
         font-family: $font__main;
@@ -91,8 +122,12 @@ body {
         justify-content: flex-end;
         align-items: center;
         &_face {
+            width: 35px;
+            height: 34px;
             display: flex;
+            justify-content: center;
             align-items: flex-end;
+            background-image: url(../img/face_hand.png);
         }
         &_btn {
             width: 133px;
@@ -118,8 +153,12 @@ body {
         justify-content: flex-end;
         align-items: center;
         &_face {
+            width: 28px;
+            height: 28px;
             display: flex;
+            justify-content: center;
             align-items: flex-end;
+            background-image: url(../img/facepalm.png);
         }
         &_btn {
             width: 133px;
@@ -724,27 +763,161 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
+    .header {
+        &__style {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        &__imgs {
+            width: 58%;
+            height: 100vh;
+            position: relative;
+        }
+        &__data {
+            width: 42%;
+            padding: 68px 0 0 0;
+        }
+    }
+    .lines__top {
+        width: 200%;
+        height: 510px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        top: 0;
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+    }
+    .lines_bg_white {
+        width: 55px;
+        height: 100%;
+        background-color: $color_white;
+    }
+    .lines__move {
+        width: 100%;
+        height: 300%;
+        background-color: $color_white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transform: rotate(-45deg);
+        top: -300px;
+        position: absolute;
+    }
+    .line_black {
+        width: 100px;
+        height: 100%;
+        margin: 0 0 0 100px;
+        background-color: $color_black;
+        color: $color_white;
+        position: absolute;
+        left: -200px;
+    }
     .conf7__bg {
         width: 100%;
-        height: 611px;
-        background-image: url(../img/7conf_background_big.jpg);
+        min-height: 681px;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        padding: 0;
+        overflow: visible;
+        background-image: url(../img/desktop/7conf_background_big.png);
         background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: auto;
+        z-index: 2;
+        position: absolute;
         top: 0px;
-        z-index: 10;
+        right: 0px;
     }
     .buttons {
-        width: 481px;
-        &__buy_btn {
-            width: 210px;
-            height: 65px;
-            font-size: 1.8rem;
-            border-radius: 12px;
+        padding: 0 0 0 70px;
+        width: 511px;
+        &__buy {
+            position: relative;
+            &_btn {
+                width: 210px;
+                height: 65px;
+                font-size: 1.8rem;
+                border-radius: 12px;
+                z-index: 1;
+            }
+            &_face {
+                width: 52px;
+                height: 52px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                background-image: url(../img/desktop/handsup_big.png);
+                z-index: 2;
+                top: -49px;
+                position: absolute;
+            }
         }
-        &__fuck_btn {
-            width: 210px;
-            height: 65px;
-            font-size: 1.8rem;
-            border-radius: 12px;
+        &__fuck {
+            position: relative;
+            &_btn {
+                width: 210px;
+                height: 65px;
+                font-size: 1.8rem;
+                border-radius: 12px;
+            }
+            &_face {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                background-image: url(../img/desktop/facepalm_big.png);
+            }
         }
+    }
+    .about {
+        padding: 50px 0 75px 70px;
+        width: 600px;
+        &__title {
+            font-size: 5rem;
+            padding: 50px 0 30px 0;
+        }
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+    //Скрытые блоки
+    .full-pass {
+        display: none;
+    }
+    .afisha__items {
+        display: none;
+    }
+    .tariff {
+        display: none;
+    }
+    .video {
+        display: none;
+    }
+    .why {
+        display: none;
+    }
+    .tolstoy {
+        display: none;
+    }
+    .feedback {
+        display: none;
+    }
+    .mountains {
+        display: none;
+    }
+    .about-bottom {
+        display: none;
+    }
+    .bottom-lines {
+        display: none;
+    }
+    .footer {
+        display: none;
     }
 }

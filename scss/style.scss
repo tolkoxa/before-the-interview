@@ -21,3 +21,122 @@ body {
         font-size: 4rem;
     }
 }
+
+.main {
+    &__style {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 100px;
+    }
+}
+
+.item {
+    width: 600px;
+    padding: 20px 0 0 100px;
+    &__title {
+        font-family: $font_3;
+        font-size: 3rem;
+        line-height: 1.25rem;
+        color: #000;
+        padding: 20px 0;
+    }
+    // .item__text
+    &__text {
+        font-family: $font_3;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        color: #000;
+        padding-bottom: 15px;
+    }
+    &__link {
+        display: block;
+        font-family: $font_3;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        color: #000;
+        &:hover {
+            text-decoration: none;
+            color: gray;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $color_grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    padding: 30px 0 0 0;
+    &_center {
+        width: 650px;
+        margin: 0 0 0 0;
+        padding: 0 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &_item {
+        width: 650px;
+        height: 100px;
+        &:nth-child(2),
+        &:nth-child(1) {
+            margin: 0 0 0 0;
+            padding: 0 0 5px 0;
+        }
+    }
+    &_title {
+        font-family: $font__main;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin: 0 0 0 0;
+        padding: 10px 0 15px 0;
+        &_link {
+            font-size: 2.7rem;
+            color: $color_black;
+            border-bottom: 1px dashed $color_black;
+            text-decoration: none;
+            &:hover {
+                color: $color_white;
+                cursor: pointer;
+                border-bottom: 1px dashed $color_white;
+            }
+        }
+    }
+    &_desc_service {
+        font-family: $font__main;
+        font-size: 2rem;
+        line-height: 1.25rem;
+        margin: 0 0 0 0;
+        padding: 0 0 5px 0;
+        &_link {
+            font-size: 2rem;
+            line-height: 2rem;
+            color: $color_black;
+            text-decoration: none;
+            &:hover {
+                color: $color_white;
+                cursor: pointer;
+            }
+        }
+    }
+    &_text {
+        margin: 0 0 0 0;
+        padding: 0 0 5px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 650px;
+        font-size: 4rem;
+        font-family: $font__main;
+        color: $color_white;
+    }
+}

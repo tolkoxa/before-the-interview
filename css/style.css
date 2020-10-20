@@ -16,3 +16,101 @@ body {
   .title__sub {
     font-family: "Scada", sans-serif;
     font-size: 4rem; }
+
+.main__style {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 100px; }
+
+.item {
+  width: 600px;
+  padding: 20px 0 0 100px; }
+  .item__title {
+    font-family: "Scada", sans-serif;
+    font-size: 3rem;
+    line-height: 1.25rem;
+    color: #000;
+    padding: 20px 0; }
+  .item__text {
+    font-family: "Scada", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    color: #000;
+    padding-bottom: 15px; }
+  .item__link {
+    display: block;
+    font-family: "Scada", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: #000; }
+    .item__link:hover {
+      text-decoration: none;
+      color: gray; }
+
+.footer {
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 0 0;
+  padding: 30px 0 0 0; }
+  .footer_center {
+    width: 650px;
+    margin: 0 0 0 0;
+    padding: 0 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .footer_item {
+    width: 650px;
+    height: 100px; }
+    .footer_item:nth-child(2), .footer_item:nth-child(1) {
+      margin: 0 0 0 0;
+      padding: 0 0 5px 0; }
+  .footer_title {
+    font-family: "Arsenal", sans-serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0 0 0 0;
+    padding: 10px 0 15px 0; }
+    .footer_title_link {
+      font-size: 2.7rem;
+      color: #000;
+      border-bottom: 1px dashed #000;
+      text-decoration: none; }
+      .footer_title_link:hover {
+        color: #fff;
+        cursor: pointer;
+        border-bottom: 1px dashed #fff; }
+  .footer_desc_service {
+    font-family: "Arsenal", sans-serif;
+    font-size: 2rem;
+    line-height: 1.25rem;
+    margin: 0 0 0 0;
+    padding: 0 0 5px 0; }
+    .footer_desc_service_link {
+      font-size: 2rem;
+      line-height: 2rem;
+      color: #000;
+      text-decoration: none; }
+      .footer_desc_service_link:hover {
+        color: #fff;
+        cursor: pointer; }
+  .footer_text {
+    margin: 0 0 0 0;
+    padding: 0 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 650px;
+    font-size: 4rem;
+    font-family: "Arsenal", sans-serif;
+    color: #fff; }

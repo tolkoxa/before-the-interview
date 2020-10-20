@@ -4,22 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Решение тестового задания по JS</title>
 </head>
 
 <body>
+    <div class="container">
+        <main>
+            <p class="title">Задание</p>
+            <p class="text">Write string preparation function, which fill template in with data from specified object <br> Data object user: {<br> id: 20<br> type_id: 'test'<br>}
+                <p class="text">Template: /api/items/%id%/%type_id%<br>Expected result: /api/items/20/test</p>
+            </p>
+        </main>
+    </div>
     <script>
         /* Write string preparation function, which fill template in with data from specified object
 
-         * Data object
-         * user: {
-         * id: 20
-         * type_id: 'test'
-         * }
-         *
-         * Template: /api/items/%id%/%type_id%
-         * Expected result: /api/items/20/test
-         */
+                                 * Data object
+                                 * user: {
+                                 * id: 20
+                                 * type_id: 'test'
+                                 * }
+                                 *
+                                 * Template: /api/items/%id%/%type_id%
+                                 * Expected result: /api/items/20/test
+                                 */
         const user = {
             id: 20,
             name: "John Dow",

@@ -1,0 +1,23 @@
+@import "_param";
+*,
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.container {
+    width: 100%;
+    padding: 100px 50px 100px 80px;
+}
+
+.title {
+    font-family: $font_2;
+    font-size: 6rem;
+    width: 500px;
+    &__sub {
+        font-family: $font_3;
+        font-size: 4rem;
+    }
+}

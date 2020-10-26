@@ -1,4 +1,8 @@
 @import "_param";
+html {
+    scroll-behavior: smooth;
+}
+
 *,
 body {
     margin: 0 0 0 0;
@@ -9,6 +13,7 @@ body {
 
 body {
     width: 100%;
+    height: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,6 +23,11 @@ body {
 
 .invisible {
     display: none;
+    opacity: 0;
+}
+
+.transition {
+    transition: 1s;
 }
 
 .wrapper {
@@ -69,7 +79,6 @@ body {
         line-height: 2.1rem;
         color: $color_black;
     }
-    //#slider
     &__range {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -93,7 +102,6 @@ body {
                 background: $color_red-light;
             }
         }
-        //main
         &-div {
             width: 100%;
             margin: 0 33px 0 16px;
@@ -102,7 +110,6 @@ body {
             position: relative;
         }
     }
-    //#selector
     &__selector {
         width: 25px;
         height: 25px;
@@ -112,7 +119,6 @@ body {
         transform: translateX(-50%);
         z-index: 2;
     }
-    //SelectBtn
     &__btn {
         width: 25px;
         height: 25px;
@@ -123,7 +129,6 @@ body {
         border: 8px solid $color_red;
         box-shadow: 1px 2px 6px 0px $color_red-light;
     }
-    //#SelectValue
     &__value {
         width: 72px;
         height: 28px;
@@ -164,7 +169,6 @@ body {
             }
         }
     }
-    //#ProgressBar
     &__progress-bar {
         width: 0%;
         height: 9px;
@@ -177,7 +181,6 @@ body {
 }
 
 .result {
-    transition: 1s;
     &__title {
         font-family: $font_main;
         font-weight: 500;
@@ -238,6 +241,10 @@ body {
         color: $color_red;
         &:hover {
             cursor: pointer;
+        }
+        &-active {
+            background-color: $color_red;
+            color: $color_white;
         }
     }
 }
@@ -405,4 +412,125 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.renderCoin {
+    display: inline-block;
+    background-image: url(../img/coin.png);
+    margin-left: -40px;
+    width: 55px;
+    height: 56px;
+    background-size: cover;
+}
+
+.open {
+    display: block;
+    position: relative;
+    &-modal {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    &-mattress {
+        position: absolute;
+        padding: 10px;
+        width: 299px;
+        height: 65px;
+        bottom: 40px;
+        left: -125px;
+        background: rgba(254, 77, 74, 0.9);
+        box-shadow: 0px 9px 10px rgba(254, 77, 74, 0.1);
+        border-radius: 5px;
+        font-family: $font_main;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $color_white;
+        z-index: 100;
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            bottom: -7px;
+            left: 136px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid $color_red;
+            position: absolute;
+        }
+    }
+    &-deposit {
+        position: absolute;
+        padding: 10px;
+        z-index: 100;
+        width: 299px;
+        height: 101px;
+        background: rgba(254, 77, 74, 0.9);
+        box-shadow: 0px 9px 10px rgba(254, 77, 74, 0.1);
+        border-radius: 5px;
+        font-family: $font_main;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $color_white;
+        bottom: 40px;
+        left: -110px;
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            bottom: -7px;
+            left: 120px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid $color_red;
+            position: absolute;
+        }
+    }
+    &-invest {
+        position: absolute;
+        width: 299px;
+        height: 173px;
+        background: rgba(254, 77, 74, 0.9);
+        box-shadow: 0px 9px 10px rgba(254, 77, 74, 0.1);
+        border-radius: 5px;
+        font-family: $font_main;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $color_white;
+        bottom: 40px;
+        right: -95px;
+        padding: 10px;
+        z-index: 100;
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            bottom: -7px;
+            right: 38px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid $color_red;
+            position: absolute;
+        }
+    }
+    &-link {
+        text-decoration: underline;
+        cursor: pointer;
+        color: $color_white;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.graph_white {
+    width: 126px;
+    height: 126px;
+}
+
+.graph_white {
+    width: 138px;
+    height: 138px;
 }

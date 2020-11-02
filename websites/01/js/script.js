@@ -12,7 +12,6 @@ startPoint = -checkWindow;
 lastCoord = checkWindow;
 
 function renderLines() {
-    console.log('start1');
     str = '';
     topLines.innerHTML = '';
     startPoint = -checkWindow;
@@ -76,6 +75,7 @@ class Jug {
         this.main;
     }
     _init() {
+        console.log('Сделал Андрей Халимоненко. Подробнее на http://cv.tolkoxa.ru');
         this.start();
     }
 
@@ -267,7 +267,6 @@ class Jug {
 
             if (e.name === 'btn-fuck') {
                 let btnItem = e.dataset.btn;
-                console.log(btnItem);
                 if (btnItem === 'price' || btnItem === 'report' || btnItem === 'crazy' || btnItem === 'money') {
                     fucks.innerHTML = '';
                     let strFuck = `

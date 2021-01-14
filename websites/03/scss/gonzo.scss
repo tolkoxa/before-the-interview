@@ -1,0 +1,71 @@
+@import "_param";
+html {
+    font-size: 10px;
+}
+
+*,
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    width: 800px;
+    border: 1px solid red;
+}
+
+.main {
+    // .main__style
+    &__style {
+        width: 100%;
+    }
+}
+
+.for-whom {
+    width: 600px;
+    margin: auto;
+    // .for-whom__title
+    &__title {}
+    // .for-whom__block
+    &__block {}
+    &__top {
+        display: flex;
+    }
+    // .for-whom__question
+    &__question {}
+    // .for-whom__text
+    &__text {}
+    // .for-whom__items
+    &__items {}
+    // .for-whom__item
+    &__item {}
+    // .for-whom__bottom
+    &__bottom {}
+    // .for-whom__program
+    &__program {}
+    // .for-whom__subtitle
+    &__subtitle {}
+    // .for-whom__buttons
+    &__buttons {}
+    // .for-whom__btn
+    &__btn {}
+}
+
+.programm {
+    // .programm__day
+    &__day {}
+    // .programm__day-text
+    &__day-text {}
+    // .programm__items
+    &__items {}
+    // .programm__item
+    &__item {}
+    // .programm__line
+    &__line {}
+    // .programm__type
+    &__type {}
+    // .programm__text
+    &__text {}
+}

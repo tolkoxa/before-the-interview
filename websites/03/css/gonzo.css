@@ -1,0 +1,22 @@
+html {
+  font-size: 10px; }
+
+*,
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+.container {
+  margin: auto;
+  width: 800px;
+  border: 1px solid red; }
+
+.main__style {
+  width: 100%; }
+
+.for-whom {
+  width: 600px;
+  margin: auto; }
+  .for-whom__top {
+    display: flex; }

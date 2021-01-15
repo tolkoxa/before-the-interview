@@ -1,4 +1,12 @@
 @import "_param";
+@font-face {
+    font-family: 'Perfect';
+    src: url('../font/Perfect/perfect.eot');
+    src: local('perfect'), local('perfect'), url('../font/Perfect/perfect.eot?#iefix') format('embedded-opentype'), url('../font/Perfect/perfect.woff2') format('woff2'), url('../font/Perfect/perfect.woff') format('woff'), url('../font/Perfect/perfect.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 html {
     font-size: 10px;
 }
@@ -11,61 +19,412 @@ body {
 }
 
 .container {
-    margin: auto;
-    width: 800px;
-    border: 1px solid red;
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    justify-content: center;
 }
 
 .main {
-    // .main__style
     &__style {
         width: 100%;
     }
 }
 
 .for-whom {
-    width: 600px;
-    margin: auto;
-    // .for-whom__title
-    &__title {}
-    // .for-whom__block
-    &__block {}
-    &__top {
-        display: flex;
+    width: 100%;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    &__title {
+        width: 100%;
+        text-align: center;
+        font-family: $font-title;
+        padding: 30px 0px 35px 0px;
+        margin: auto;
+        font-size: 2.30rem;
+        line-height: 2rem;
+        text-transform: uppercase;
     }
-    // .for-whom__question
-    &__question {}
-    // .for-whom__text
-    &__text {}
-    // .for-whom__items
-    &__items {}
-    // .for-whom__item
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 900px;
+    }
+    &__top {
+        width: 100%;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        &::after {
+            content: '?';
+            position: absolute;
+            padding: 25px 0 0 40px;
+            width: 155px;
+            height: 181px;
+            background-color: $color_yellow;
+            font-family: $font-pixel;
+            font-size: 18rem;
+            font-weight: 500;
+            top: -20px;
+            left: 29px;
+            z-index: 1;
+        }
+    }
+    &__squares {
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        z-index: 3;
+        font-size: 6rem;
+        top: 0px;
+        left: 0px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 215px;
+            background: linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, $color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%);
+            background-position: right, bottom, left;
+            background-repeat: repeat-y, repeat-x, repeat-y;
+            background-size: 6px 65px, 65px 6px, 6px 65px;
+            border-top: none;
+            top: 0px;
+            left: 0px;
+            z-index: 4;
+        }
+    }
+    &__text {
+        width: 100%;
+        background: linear-gradient(to right, $color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%);
+        background-position: top, right;
+        background-repeat: repeat-x, repeat-y;
+        background-size: 65px 6px, 6px 65px;
+        padding: 30px 50px 30px 275px;
+        z-index: 2;
+    }
+    &__items {
+        font-family: $font-text;
+        font-size: 2.6rem;
+        line-height: 2.8rem;
+        font-weight: 400;
+        color: $color_black;
+    }
     &__item {}
-    // .for-whom__bottom
-    &__bottom {}
-    // .for-whom__program
-    &__program {}
-    // .for-whom__subtitle
-    &__subtitle {}
-    // .for-whom__buttons
-    &__buttons {}
-    // .for-whom__btn
-    &__btn {}
+    &__bottom {
+        background: linear-gradient(to right, $color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%);
+        background-position: top, left;
+        background-repeat: repeat-x, repeat-y;
+        background-size: 65px 6px, 6px 65px;
+        border-right: none;
+        border-bottom: none;
+        width: 820px;
+        height: 170px;
+    }
+    &__program {
+        width: 100%;
+        padding-left: 220px;
+        padding-top: 55px;
+        position: relative;
+        &::before {
+            content: '\22b9';
+            position: absolute;
+            font-size: 10.5rem;
+            font-family: $font-text;
+            color: $color_black;
+            font-weight: 600;
+            top: -10px;
+            left: 55px;
+        }
+        &::after {
+            content: '\22b9';
+            position: absolute;
+            font-size: 20rem;
+            font-family: $font-text;
+            color: $color_black;
+            font-weight: 600;
+            top: -20px;
+            right: -15px;
+        }
+    }
+    &__subtitle {
+        font-family: $font-title;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    &__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 55px 220px 0 150px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '\22b9';
+            font-size: 17rem;
+            font-family: $font-text;
+            color: $color_black;
+            font-weight: 600;
+            top: 0px;
+            left: -55px;
+        }
+        &::after {
+            position: absolute;
+            content: '\22b9';
+            font-size: 9rem;
+            font-family: $font-text;
+            color: $color_black;
+            font-weight: 600;
+            bottom: -45px;
+            right: 60px;
+        }
+    }
+    &__btn {
+        width: 215px;
+        height: 62px;
+        background-color: $color_yellow;
+        color: $color-dark;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 2.1rem;
+        font-family: $font-text;
+        font-weight: 500;
+        &:hover {
+            cursor: pointer;
+            background-color: $color_dark-bg;
+            color: $color_white;
+        }
+    }
 }
 
 .programm {
-    // .programm__day
-    &__day {}
-    // .programm__day-text
-    &__day-text {}
-    // .programm__items
-    &__items {}
-    // .programm__item
-    &__item {}
-    // .programm__line
-    &__line {}
-    // .programm__type
-    &__type {}
-    // .programm__text
-    &__text {}
+    width: 100%;
+    margin: 0 auto;
+    &__day {
+        padding-bottom: 20px;
+    }
+    &__day-text {
+        width: 455px;
+        height: 77px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_dark-bg;
+        font-family: $font-title;
+        font-size: 2.3rem;
+        color: $color_yellow;
+        font-weight: 400;
+        margin: 0 auto;
+    }
+    &__items {
+        padding-top: 55px;
+    }
+    &__item {
+        width: 100%;
+        min-height: 55px;
+        display: flex;
+        padding-bottom: 10px;
+    }
+    &__line {
+        width: 28%;
+        text-align: right;
+    }
+    &__type {
+        background-color: $color_yellow;
+        font-family: $font-text;
+        font-weight: 400;
+        font-size: 2.5rem;
+        color: $color_black;
+        line-height: 3rem;
+        padding-right: 20px;
+    }
+    &__text {
+        width: 72%;
+        font-family: $font-text;
+        font-weight: 400;
+        font-size: 2.5rem;
+        color: $color_black;
+        line-height: 3rem;
+        padding-left: 30px;
+        padding-bottom: 20px;
+    }
 }
+
+@media only screen and (min-width: 768px) and (max-width:939px) {
+    .container {
+        width: 96%;
+    }
+    html {
+        font-size: 8px;
+    }
+    .for-whom {
+        padding-bottom: 70px;
+        &__title {
+            padding: 15px 0px 15px 0px;
+            margin: auto;
+            font-size: 2.30rem;
+            line-height: 2rem;
+            text-transform: uppercase;
+        }
+        &__block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+        }
+        &__top {
+            width: 100%;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            &::after {
+                content: '?';
+                position: absolute;
+                padding: 15px 0 0 25px;
+                width: 145px;
+                height: 171px;
+                background-color: $color_yellow;
+                font-family: $font-pixel;
+                font-size: 18rem;
+                font-weight: 500;
+                top: -10px;
+                left: 19px;
+                z-index: 1;
+            }
+        }
+        &__squares {
+            width: 170px;
+            height: 170px;
+            position: absolute;
+            z-index: 3;
+            font-size: 6rem;
+            top: 0px;
+            left: 0px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 175px;
+                height: 195px;
+                background: linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, $color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%);
+                background-position: right, bottom, left;
+                background-repeat: repeat-y, repeat-x, repeat-y;
+                background-size: 4px 40px, 40px 4px, 4px 40px;
+                border-top: none;
+                top: 0px;
+                left: 0px;
+                z-index: 4;
+            }
+        }
+        &__text {
+            width: 100%;
+            background: linear-gradient(to right, $color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%);
+            background-position: top, right;
+            background-repeat: repeat-x, repeat-y;
+            background-size: 40px 4px, 4px 40px;
+            padding: 15px 30px 20px 220px;
+            z-index: 2;
+        }
+        &__items {
+            font-family: $font-text;
+            font-size: 2.6rem;
+            line-height: 2.8rem;
+            font-weight: 400;
+            color: $color_black;
+        }
+        &__item {}
+        &__bottom {
+            background: linear-gradient(to right, $color_dark 50%, rgba(255, 255, 255, 0) 0%), linear-gradient($color_dark 50%, rgba(255, 255, 255, 0) 0%);
+            background-position: top, left;
+            background-repeat: repeat-x, repeat-y;
+            background-size: 40px 4px, 4px 40px;
+            border-right: none;
+            border-bottom: none;
+            width: 80%;
+            height: 130px;
+        }
+        &__program {
+            width: 100%;
+            padding-left: 170px;
+            padding-top: 40px;
+            position: relative;
+            &::before {
+                content: '\22b9';
+                position: absolute;
+                font-size: 10.5rem;
+                font-family: $font-text;
+                color: $color_black;
+                font-weight: 600;
+                top: -10px;
+                left: 55px;
+            }
+            &::after {
+                content: '\22b9';
+                position: absolute;
+                font-size: 20rem;
+                font-family: $font-text;
+                color: $color_black;
+                font-weight: 600;
+                top: -20px;
+                right: -15px;
+            }
+        }
+        &__subtitle {
+            font-family: $font-title;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        &__buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 55px 105px 0 35px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '\22b9';
+                font-size: 17rem;
+                font-family: $font-text;
+                color: $color_black;
+                font-weight: 600;
+                top: 0px;
+                left: -55px;
+            }
+            &::after {
+                position: absolute;
+                content: '\22b9';
+                font-size: 9rem;
+                font-family: $font-text;
+                color: $color_black;
+                font-weight: 600;
+                bottom: -45px;
+                right: 60px;
+            }
+        }
+        &__btn {
+            width: 215px;
+            height: 62px;
+            background-color: $color_yellow;
+            color: $color-dark;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 2.1rem;
+            font-family: $font-text;
+            font-weight: 500;
+            &:hover {
+                cursor: pointer;
+                background-color: $color_dark-bg;
+                color: $color_white;
+            }
+        }
+    }
+    .programm {
+        &__text {
+            padding-right: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {}

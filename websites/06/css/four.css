@@ -1,0 +1,236 @@
+html {
+  font-size: 10px; }
+
+*,
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+.inactive {
+  display: none; }
+
+.wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 10px 12px;
+  border: 1px solid; }
+
+.header__style {
+  display: flex; }
+.header__logo {
+  background-image: url("../img/mobil/logo_m.png");
+  width: 36px;
+  height: 44px;
+  alt: "FOUR GROUP"; }
+.header__burger {
+  width: 45px;
+  height: 35px;
+  display: flex;
+  align-items: center; }
+  .header__burger:hover {
+    cursor: pointer; }
+  .header__burger_items {
+    margin: 0 auto;
+    width: 22px;
+    height: 3px;
+    background-color: #5B7004;
+    position: relative; }
+    .header__burger_items::before {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      width: 22px;
+      height: 3px;
+      background-color: #5B7004; }
+    .header__burger_items::after {
+      position: absolute;
+      content: '';
+      top: -8px;
+      left: 0;
+      width: 22px;
+      height: 3px;
+      background-color: #5B7004; }
+.header__catalog {
+  display: none;
+  width: 204px;
+  height: 51px;
+  background-color: #FDFBF0;
+  border-radius: 10px;
+  align-items: center; }
+.header__search {
+  display: flex;
+  align-items: center;
+  width: 182;
+  height: 30px;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px; }
+.header__input {
+  border: none;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #000; }
+.header__loupe:hover {
+  cursor: pointer; }
+.header__heart {
+  padding-left: 12px;
+  padding-top: 8px; }
+.header__icon {
+  fill: #444; }
+  .header__icon_loupe {
+    fill: #494949; }
+
+.carousel {
+  padding: 23px 0 3px 0;
+  margin: 0 auto; }
+  .carousel__items {
+    display: flex;
+    overflow: hidden; }
+  .carousel__item {
+    width: 295px;
+    height: 200px;
+    margin: 0 1px;
+    filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.05)); }
+  .carousel__img {
+    border-radius: 15px; }
+
+.pagination__items {
+  display: flex;
+  widows: 100%;
+  justify-content: center; }
+.pagination__item {
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background-color: rgba(148, 175, 74, 0.5); }
+  .pagination__item:last-of-type {
+    padding-right: 0px; }
+  .pagination__item:hover {
+    cursor: pointer;
+    background-color: #94AF4A; }
+  .pagination__item_active {
+    background-color: #94AF4A; }
+
+.advantages {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 8px; }
+  .advantages__items {
+    display: flex;
+    overflow: hidden; }
+  .advantages__item {
+    width: 86px;
+    height: 102px;
+    margin-left: 6px;
+    margin-right: 6px; }
+    .advantages__item:last-of-type {
+      margin-right: 0px; }
+  .advantages__icon {
+    width: 86px;
+    height: 103px;
+    padding-top: 75px; }
+  .advantages__text {
+    width: 77px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #494949; }
+
+.adv-1 {
+  background-image: url("../img/mobil/advantages/advantages_m-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto; }
+
+.adv-2 {
+  background-image: url("../img/mobil/advantages/advantages_m-2.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto; }
+
+.adv-3 {
+  background-image: url("../img/mobil/advantages/advantages_m-3.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto; }
+
+.adv-4 {
+  background-image: url("../img/mobil/advantages/advantages_m-4.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain; }
+
+.main__style {
+  padding-top: 59px; }
+
+.menu__items {
+  display: flex;
+  justify-content: space-between; }
+.menu__item {
+  width: 60px;
+  height: 77px;
+  position: relative;
+  z-index: 1; }
+.menu__img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  padding-bottom: 6px;
+  z-index: 2;
+  border: 1px solid; }
+.menu__text {
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #000;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  border: 1px solid orange; }
+.menu__room {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+  .menu__room_fill {
+    fill: #E9E9E9; }
+.menu__icons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.chapter__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  text-transform: uppercase;
+  color: #494949; }
+
+.room-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 62px;
+  fill: none;
+  viewbox-x: 0;
+  viewbox-y: 0;
+  viewbox-width: 60;
+  viewbox-height: 62;
+  z-index: 2; }

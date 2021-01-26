@@ -1,0 +1,309 @@
+@import "_param_four";
+html {
+    font-size: 10px;
+}
+
+*,
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+.inactive {
+    display: none;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+    padding: 10px 12px;
+    border: 1px solid;
+}
+
+.header {
+    &__style {
+        display: flex;
+    }
+    &__logo {
+        background-image: url('../img/mobil/logo_m.png');
+        width: 36px;
+        height: 44px;
+        alt: "FOUR GROUP";
+    }
+    &__burger {
+        width: 45px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+        &_items {
+            margin: 0 auto;
+            width: 22px;
+            height: 3px;
+            background-color: $color_burger;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 8px;
+                left: 0;
+                width: 22px;
+                height: 3px;
+                background-color: $color_burger;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: -8px;
+                left: 0;
+                width: 22px;
+                height: 3px;
+                background-color: $color_burger;
+            }
+        }
+    }
+    &__catalog {
+        display: none;
+        // display: flex;
+        width: 204px;
+        height: 51px;
+        background-color: $bgcolor_plate;
+        border-radius: 10px;
+        align-items: center;
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        width: 182;
+        height: 30px;
+        padding: 5px 10px;
+        background: $color_white;
+        border: 1.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    &__input {
+        border: none;
+        outline: none;
+        font-family: $font_main;
+        font-size: 1rem;
+        color: $color_black;
+    }
+    &__loupe {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    // .header__pay
+    &__pay {}
+    // .header__delivery
+    &__delivery {}
+    &__heart {
+        padding-left: 12px;
+        padding-top: 8px;
+    }
+    &__icon {
+        fill: $color_icons;
+        &_loupe {
+            fill: $color_text;
+        }
+    }
+}
+
+.carousel {
+    padding: 23px 0 3px 0;
+    margin: 0 auto;
+    &__items {
+        display: flex;
+        overflow: hidden;
+    }
+    &__item {
+        width: 295px;
+        height: 200px;
+        margin: 0 1px;
+        filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.05));
+    }
+    &__img {
+        border-radius: 15px;
+    }
+}
+
+.pagination {
+    &__items {
+        display: flex;
+        widows: 100%;
+        justify-content: center;
+    }
+    &__item {
+        width: 5px;
+        height: 5px;
+        margin: 0 2px;
+        border-radius: 50%;
+        background-color: $color_pagination;
+        &:last-of-type {
+            padding-right: 0px;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: $color_pagination_active;
+        }
+        &_active {
+            background-color: $color_pagination_active;
+        }
+    }
+}
+
+.advantages {
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 8px;
+    &__items {
+        display: flex;
+        overflow: hidden;
+    }
+    &__item {
+        width: 86px;
+        height: 102px;
+        margin-left: 6px;
+        margin-right: 6px;
+        &:last-of-type {
+            margin-right: 0px;
+        }
+    }
+    &__icon {
+        width: 86px;
+        height: 103px;
+        padding-top: 75px;
+    }
+    &__text {
+        width: 77px;
+        font-family: $font_main;
+        font-weight: 400;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color_text;
+    }
+}
+
+.adv-1 {
+    background-image: url('../img/mobil/advantages/advantages_m-1.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+}
+
+.adv-2 {
+    background-image: url('../img/mobil/advantages/advantages_m-2.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+}
+
+.adv-3 {
+    background-image: url('../img/mobil/advantages/advantages_m-3.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+}
+
+.adv-4 {
+    background-image: url('../img/mobil/advantages/advantages_m-4.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+.main {
+    // .main__style
+    &__style {
+        padding-top: 59px;
+    }
+}
+
+.menu {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 60px;
+        height: 77px;
+        position: relative;
+        z-index: 1;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 56px;
+        padding-bottom: 6px;
+        z-index: 2;
+        border: 1px solid;
+        &-1 {}
+    }
+    &__text {
+        position: absolute;
+        font-family: $font_main;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        text-align: center;
+        color: $color_black;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        border: 1px solid orange;
+    }
+    &__room {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        &_fill {
+            fill: $bgcolor_svg;
+        }
+    }
+    &__icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.chapter__title {
+    font-family: $font_main;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    text-transform: uppercase;
+    color: $color_text;
+}
+
+.room-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 62px;
+    fill: none;
+    viewbox-x: 0;
+    viewbox-y: 0;
+    viewbox-width: 60;
+    viewbox-height: 62;
+    z-index: 2;
+}
+
+.room-2 {}
+
+.room-3 {}
+
+.room-4 {}
+
+.room-5 {}

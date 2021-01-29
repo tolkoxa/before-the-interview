@@ -231,46 +231,28 @@ body {
     }
     &__item {
         width: 60px;
-        height: 77px;
-        position: relative;
-        z-index: 1;
-    }
-    &__img {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 56px;
-        padding-bottom: 6px;
-        z-index: 2;
-        border: 1px solid;
-        &-1 {}
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
     }
     &__text {
-        position: absolute;
         font-family: $font_main;
         font-weight: 400;
         font-size: 1rem;
-        line-height: 1.4rem;
+        line-height: 1rem;
         text-align: center;
         color: $color_black;
-        left: 0;
-        bottom: 0;
-        z-index: 2;
-        border: 1px solid orange;
     }
     &__room {
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
         &_fill {
             fill: $bgcolor_svg;
         }
     }
     &__icons {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -286,24 +268,85 @@ body {
     color: $color_text;
 }
 
-.room-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 62px;
-    fill: none;
-    viewbox-x: 0;
-    viewbox-y: 0;
-    viewbox-width: 60;
-    viewbox-height: 62;
-    z-index: 2;
+.m_room_1 {
+    background-image: url(../img/mobil/rooms/m_room_1.png);
+    background-repeat: no-repeat;
+    background-position: center 18px;
+    background-size: auto auto;
+    &:hover {
+        cursor: pointer;
+        background-image: url(../img/mobil/rooms/m_room_1_active.png);
+    }
+    &_active {
+        background-image: url(../img/mobil/rooms/m_room_1_active.png);
+        background-repeat: no-repeat;
+        background-position: center 18px;
+        background-size: auto auto;
+    }
 }
 
-.room-2 {}
+.m_room_2 {
+    background-image: url(../img/mobil/rooms/m_room_2.png);
+    background-repeat: no-repeat;
+    background-position: center 12px;
+    background-size: auto auto;
+    &:hover {
+        cursor: pointer;
+        background-image: url(../img/mobil/rooms/m_room_2_active.png);
+    }
+    &_active {
+        background-image: url(../img/mobil/rooms/m_room_2_active.png);
+        background-repeat: no-repeat;
+        background-position: center 12px;
+        background-size: auto auto;
+    }
+}
 
-.room-3 {}
+.m_room_3 {
+    background-image: url(../img/mobil/rooms/m_room_3.png);
+    background-repeat: no-repeat;
+    background-position: center 4px;
+    background-size: auto auto;
+    &:hover {
+        cursor: pointer;
+        background-image: url(../img/mobil/rooms/m_room_3_active.png);
+    }
+    &_active {
+        background-image: url(../img/mobil/rooms/m_room_3_active.png);
+        background-repeat: no-repeat;
+        background-position: center 4px;
+        background-size: auto auto;
+    }
+}
 
-.room-4 {}
+.m_room_4 {
+    background-image: url(../img/mobil/rooms/m_room_4.png);
+    background-repeat: no-repeat;
+    background-position: center 17px;
+    background-size: auto auto;
+    &:hover {
+        background-image: url(../img/mobil/rooms/m_room_4_active.png);
+    }
+    &_active {
+        background-image: url(../img/mobil/rooms/m_room_4_active.png);
+        background-repeat: no-repeat;
+        background-position: center 17px;
+        background-size: auto auto;
+    }
+}
 
-.room-5 {}
+.m_room_5 {
+    background-image: url(../img/mobil/rooms/m_room_5.png);
+    background-repeat: no-repeat;
+    background-position: center 22px;
+    background-size: auto auto;
+    &:hover {
+        background-image: url(../img/mobil/rooms/m_room_5_active.png);
+    }
+    &_active {
+        background-image: url(../img/mobil/rooms/m_room_5_active.png);
+        background-repeat: no-repeat;
+        background-position: center 22px;
+        background-size: auto auto;
+    }
+}

@@ -31,63 +31,64 @@
 <body>
     <div class="wrapper">
         <header class="header__style">
-            <div class="header__logo"></div>
-            <div class="header__burger">
-                <div class="header__burger_items"></div>
-            </div>
-            <div class="header__catalog">
+            <div class="click_base invisible" id="base"></div>
+            <div class="bmenu invisible" id="burgermenu"></div>
+            <div class="favorites invisible" id="favorites"></div>
+            <div class="header__menu">
+                <div class="header__logo"></div>
                 <div class="header__burger" id="burger">
                     <div class="header__burger_items"></div>
                 </div>
-                <p class="catalog__text">Каталог</p>
-            </div>
-            <div class="header__search">
-                <input class="header__input" type="text">
-                <p class="header__loupe">
-                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="header__catalog">
+                    <div class="header__burger">
+                        <div class="header__burger_items"></div>
+                    </div>
+                    <p class="catalog__text">Каталог</p>
+                </div>
+                <div class="header__search">
+                    <input class="header__input" type="text">
+                    <p class="header__loupe">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="header__icon_loupe" d="M20.5609 19.7627L13.4373 12.6255C14.5523 11.2685 15.1584 9.56666 15.1584 7.81983C15.1584 3.63643 11.7612 0.240234 7.59328 0.240234C3.42538 0.240234 0.0281982 3.64393 0.0281982 7.81983C0.0281982 11.9957 3.41789 15.3994 7.59328 15.3994C9.35173 15.3994 11.0578 14.7772 12.4122 13.6526L19.5358 20.7898C19.6705 20.9248 19.8575 20.9998 20.0446 20.9998C20.2317 20.9998 20.4188 20.9248 20.5534 20.7898C20.6881 20.6549 20.763 20.475 20.763 20.28C20.7704 20.0851 20.6956 19.8977 20.5609 19.7627ZM13.7217 7.81983C13.7217 11.201 10.9755 13.9525 7.60076 13.9525C4.22603 13.9525 1.47986 11.201 1.47986 7.81983C1.47986 4.43862 4.22603 1.68718 7.60076 1.68718C10.9755 1.68718 13.7217 4.43862 13.7217 7.81983Z" />
                         </svg>
-                </p>
-            </div>
-            <div class="header__pay"></div>
-            <div class="header__delivery"></div>
-            <div class="header__heart">
-                <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </p>
+                </div>
+                <div class="header__pay"></div>
+                <div class="header__delivery"></div>
+                <div class="header__heart" id="heart">
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="header__icon" d="M19.3017 1.39263C18.3201 0.464078 16.9639 0 15.2326 0C14.7535 0 14.2645 0.0804802 13.7661 0.241362C13.2675 0.402361 12.8037 0.619571 12.3752 0.892834C11.9461 1.16602 11.5773 1.42256 11.2679 1.66208C10.9589 1.90167 10.6652 2.15628 10.387 2.42573C10.1087 2.15628 9.81501 1.90167 9.50597 1.66208C9.19674 1.42256 8.82781 1.16617 8.39879 0.892834C7.96985 0.619453 7.50611 0.402401 7.00766 0.241362C6.50925 0.0805195 6.02034 0 5.54121 0C3.80998 0 2.45373 0.464196 1.47226 1.39263C0.490779 2.32098 0 3.60866 0 5.25579C0 5.75743 0.0909527 6.27422 0.272493 6.80552C0.454032 7.3371 0.660909 7.79013 0.892717 8.1644C1.12448 8.53864 1.38731 8.90359 1.681 9.25926C1.97469 9.61489 2.18932 9.85999 2.32441 9.99475C2.45962 10.1295 2.56592 10.227 2.64319 10.2869L9.87689 17.0477C10.016 17.1824 10.186 17.25 10.387 17.25C10.5879 17.25 10.758 17.1824 10.8971 17.0477L18.1193 10.3091C19.8891 8.59489 20.774 6.91031 20.774 5.25563C20.774 3.60839 20.2833 2.32082 19.3017 1.39263ZM17.1107 9.25364L10.387 15.5314L3.65183 9.24231C2.20658 7.84256 1.48407 6.51346 1.48407 5.25563C1.48407 4.64928 1.56715 4.11389 1.73322 3.64981C1.89941 3.18565 2.11193 2.8168 2.37082 2.54354C2.62975 2.2702 2.94463 2.04764 3.31559 1.87531C3.68675 1.70314 4.04995 1.58706 4.4054 1.52719C4.76084 1.4674 5.13948 1.43747 5.54141 1.43747C5.94323 1.43747 6.37611 1.53282 6.8398 1.72379C7.30342 1.91469 7.73041 2.15428 8.12065 2.44249C8.51098 2.7309 8.84523 3.00038 9.12357 3.2511C9.40174 3.50206 9.63351 3.73214 9.81903 3.94179C9.95806 4.10657 10.1476 4.18894 10.387 4.18894C10.6266 4.18894 10.8159 4.10657 10.9551 3.94179C11.1406 3.73214 11.3725 3.50195 11.6507 3.2511C11.9289 3.00038 12.2632 2.73101 12.6533 2.44249C13.0437 2.15428 13.4707 1.91469 13.9345 1.72379C14.3981 1.53286 14.831 1.43747 15.2329 1.43747C15.6348 1.43747 16.0133 1.4674 16.3689 1.52719C16.7244 1.58702 17.0877 1.70314 17.4587 1.87531C17.8297 2.0476 18.1446 2.27032 18.4034 2.54354C18.6623 2.8168 18.8749 3.18565 19.0411 3.64981C19.207 4.11389 19.2901 4.64928 19.2901 5.25563C19.29 6.51346 18.5637 7.84626 17.1107 9.25364Z"/>
                     </svg>
+                </div>
             </div>
         </header>
-        <section class="carousel" id="carousel">
+        <section class="carousel">
             <div class="carousel__items">
-                <div class="carousel__item">
-                    <img class="carousel__img" src="img/mobil/slider/slider-1.png">
-                </div>
-                <div class="carousel__img" class="carousel__item">
-                    <img src="img/mobil/slider/slider-2.png">
-                </div>
-                <div class="carousel__img" class="carousel__item">
-                    <img src="img/mobil/slider/slider-3.png">
-                </div>
-                <div class="carousel__img" class="carousel__item">
-                    <img src="img/mobil/slider/slider-4.png">
-                </div>
-                <div class="carousel__img" class="carousel__item">
-                    <img src="img/mobil/slider/slider-5.png">
-                </div>
-                <div class="carousel__img" class="carousel__item">
-                    <img src="img/mobil/slider/slider-6.png">
+                <div class="carousel__line" id="carousel">
+                    <div class="carousel__item">
+                        <img class="carousel__img" src="img/mobil/slider/slider-1.png">
+                    </div>
+                    <div class="carousel__item">
+                        <img class="carousel__img" src="img/mobil/slider/slider-2.png">
+                    </div>
+                    <div class="carousel__item">
+                        <img class="carousel__img" src="img/mobil/slider/slider-4.png">
+                    </div>
+                    <div class="carousel__item">
+                        <img class="carousel__img" src="img/mobil/slider/slider-6.png">
+                    </div>
                 </div>
             </div>
             <div class="pagination__items" id="pagcarousel">
-                <div class="pagination__item pagination__item_active"></div>
-                <div class="pagination__item"></div>
-                <div class="pagination__item"></div>
-                <div class="pagination__item"></div>
+                <div class="pagination__item pagination__item_active" data-pag="1" id="pag1" name="carousel"></div>
+                <div class="pagination__item" name="carousel" data-pag="2" id="pag2"></div>
+                <div class="pagination__item" name="carousel" data-pag="3" id="pag3"></div>
+                <div class="pagination__item" name="carousel" data-pag="4" id="pag4"></div>
             </div>
         </section>
     </div>
     <section class="advantages">
-        <div class="advantages__items">
+        <div class="advantages__items" id="advantages">
             <div class="advantages__item">
                 <div class="advantages__icon adv-1">
                     <p class="advantages__text">Более 10 000 товаров</p>
@@ -111,48 +112,380 @@
                 </div>
             </div>
         </div>
-        <div class="pagination__items">
-            <div class="pagination__item pagination__item_active"></div>
-            <div class="pagination__item"></div>
+        <div class="pagination__items advantages__pagination">
+            <div class="pagination__item pagination__item_active" id="pagadv1"></div>
+            <div class="pagination__item" id="pagadv2"></div>
         </div>
     </section>
     <div class="wrapper">
         <main class="main__style">
-            <section class="menu">
+            <section class="menu" id="allrooms">
                 <h2 class="chapter__title">Комнаты</h2>
                 <div class="menu__items">
-                    <div class="menu__item m_room_1_active">
+                    <div class="menu__item m_room_1" name="rooms" data-room="1" id="room1">
                         <p class="menu__text">Гостинная</p>
                     </div>
-                    <div class="menu__item m_room_2">
-                        <div class="menu__img">
-                            <img>
-                        </div>
+                    <div class="menu__item m_room_2" name="rooms" data-room="2" id="room2">
                         <p class="menu__text">Детская</p>
                     </div>
-                    <div class="menu__item m_room_3">
-                        <div class="menu__img">
-                            <img>
-                        </div>
+                    <div class="menu__item m_room_3" name="rooms" data-room="3" id="room3">
                         <p class="menu__text">Коридор</p>
                     </div>
-                    <div class="menu__item m_room_4">
-                        <div class="menu__img">
-                            <img>
-                        </div>
+                    <div class="menu__item m_room_4" name="rooms" data-room="4" id="room4">
                         <p class="menu__text">Кухня</p>
                     </div>
-                    <div class="menu__item m_room_5">
-                        <div class="menu__img">
-                            <img>
-                        </div>
+                    <div class="menu__item m_room_5" name="rooms" data-room="5" id="room5">
                         <p class="menu__text">Спальня</p>
                     </div>
                 </div>
             </section>
+            <section class="submenu" id="submenu"></section>
+            <!-- <section class="submenu">
+                <div class="submenu__item">Диваны</div>
+                <div class="submenu__item">Стулья</div>
+                <div class="submenu__item">Столы</div>
+                <div class="submenu__item">ТВ тумбы</div>
+                <div class="submenu__item">Компьютерные столы</div>
+                <div class="submenu__item">Софы</div>
+                <div class="submenu__item">Кресла</div>
+                <div class="submenu__item">Гостинные стенки</div>
+                <div class="submenu__item">Тахты</div>
+                <div class="submenu__item">Комоды</div>
+                <div class="submenu__item">Буфеты и серванты</div>
+                <div class="submenu__item">Банкетки и пуфы</div>
+            </section> -->
+            <section class="fotos">
+                <div class="fotos__items">
+                    <div class="fotos__left">
+                        <div class="fitem fitem__big">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_01.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__big">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fitem fitem__small">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_03_s.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__small">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fotos__right">
+                        <div class="fitem fitem__small">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_02_s.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__small">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fitem fitem__big">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_04.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__big">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fotos__items">
+                    <div class="fotos__left">
+                        <div class="fitem fitem__big">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_01.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__big">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fitem fitem__small">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_03_s.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__small">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fotos__right">
+                        <div class="fitem fitem__small">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_02_s.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__small">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fitem fitem__big">
+                            <div class="fitem__img">
+                                <img src="img/mobil/fotos/foto_04.png">
+                            </div>
+                            <div class="fitem__lighten"></div>
+                            <div class="fitem__text fitem__big">
+                                <div class="fitem__top">
+                                    <div class="fitem__type">Спальня</div>
+                                    <div class="fitem__heart">
+                                        <svg class="fitem__heart_svg" width="14" height="12" viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+                                    </div>
+                                </div>
+                                <div class="fitem__bottom">
+                                    <p class="fitem__title">Кровать двухспальная</p>
+                                    <p class="fitem__title">30 000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fotos__more">
+                    <button class="fotos__btn" id="more">Ещё</button>
+                </div>
+            </section>
+            <section class="map">
+                <h2 class="chapter__title">Точки продаж</h2>
+                <div class="map__img">
+                    <img src="img/mobil/map_stub.png" alt="" width="290" height="140">
+                </div>
+            </section>
+            <section class="stages" id="stagescurtail">
+                <h2 class="chapter__title">Этапы работ</h2>
+                <div class="stages__curtail">
+                    <div class="stages__line-1">
+                        <div class="stages__items">
+                            <img src="img/mobil/stages/curtail/curtail-01.png" width="60" height="60" alt=""> &rarr;
+                            <img src="img/mobil/stages/curtail/curtail-02.png" width="53" height="57" alt=""> &rarr;
+                            <img src="img/mobil/stages/curtail/curtail-03.png" width="57" height="50" alt=""> &rarr;
+                            <img src="img/mobil/stages/curtail/curtail-04.png" width="57" height="60" alt="">
+                        </div>
+                    </div>
+                    <div class="stages__line-2">&nbsp;</div>
+                    <div class="stages__line-3">
+                        <div class="stages__items">
+                            <img src="img/mobil/stages/curtail/curtail-05.png" width="64" height="61" alt=""> &rarr;
+                            <img src="img/mobil/stages/curtail/curtail-06.png" width="77" height="77" alt=""> &rarr;
+                            <img src="img/mobil/stages/curtail/curtail-07.png" width="77" height="77" alt="">
+                        </div>
+                    </div>
+                    <div class="stages__line-4"></div>
+                    <div class="stages__line-5">
+                        <div class="stages__items"></div>
+                    </div>
+                    <div class="stages__line-6"></div>
+                </div>
+                <div class="stages__expand">
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-01.png" alt="" width="62" height="66">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Стадия решения о покупке. Выбор производителя, заявка на замер.</div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-02.png" alt="" width="73" height="79">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Прорисовка проекта в 3D-программе, согласование размеров, выбор материалов, фурнитуры и доборных элементов.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-03.png" alt="" width="91" height="91">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Заказ, заключение договора, оплата.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-04.png" alt="" width="60" height="57">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Составленние технологической карты. Карт распила и присадки
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-05.png" alt="" width="70" height="72">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Распил материала на детали, крромление, полировка.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-06.png" alt="" width="74" height="68">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Присадка деталей (присверловка), навеска фурнитуры, контрольная сборка на стенде.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-07.png" alt="" width="68" height="72">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Приёмка отделом контроля качества изделия у сборщика.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-08.png" alt="" width="68" height="65">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Оповещение клиента о готовности изделия к отгрузке.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-09.png" alt="" width="82" height="82">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Произведение доплаты и согласование удобной клиенту даты привоза и монтажа изделия.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-10.png" alt="" width="60" height="56">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">Привоз, разгрузка, подъём, монтаж изделия. Выверка зазоров, регулеровка, борка столярного мусора.
+                        </div>
+                    </div>
+                    <div class="stages__item">
+                        <div class="stages__left">
+                            <div class="stages__img">
+                                <img src="img/mobil/stages/expand/expand-11.png" alt="" width="68" height="70">
+                            </div>
+                            <div class="stages__arrow">&nbsp;</div>
+                        </div>
+                        <div class="stages__text">подписание актов приёмки, получение гарантии.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <h2 class="chapter__title">О компании</h2>
+                <div class="about__block">
+                    <img class="about__img" src="img/mobil/about_footer.png" alt="О компании" width="100%" height="auto">
+                    <p class="about__text">
+                        Lorem Ipsum - это текст-&laquo;рыба&raquo;, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                        используя Lorem Ipsum для распечатки образцов. <a href="#" class="about__link">Подробнее</a>
+                    </p>
+                </div>
+            </section>
         </main>
+        <footer class="footer__style">
+            <div class="footer__text">Политика конфеденциальности</div>
+            <div class="footer__icons">
+                <svg class="footer__icon" width="22" height="13" viewBox="0 0 22 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.0528 12.3163C20.3097 12.7739 17.2869 12.9101 16.5553 12.3874C16.1539 12.1009 15.7869 11.7421 15.4382 11.401C15.1947 11.1622 14.9177 11.0462 14.7083 10.7872C14.5378 10.575 14.4204 10.3249 14.2402 10.1162C13.9364 9.76494 13.4683 9.4663 13.0978 9.89532C12.5406 10.5403 13.1857 11.8083 12.4423 12.2905C12.193 12.4524 11.9416 12.4993 11.6302 12.4761L10.9403 12.5071C10.5348 12.5149 9.8929 12.5184 9.43212 12.4365C8.91753 12.3455 8.49321 12.0691 8.02861 11.8661C7.14586 11.4813 6.30458 10.9569 5.66472 10.2304C3.92334 8.25207 1.58415 5.53103 0.675523 3.0436C0.488211 2.53246 -0.00491542 1.52089 0.462923 1.08233C1.09925 0.627856 4.22356 0.499206 4.71052 1.20259C4.90871 1.48794 5.03339 1.90685 5.17336 2.23035C5.34743 2.63394 5.44212 3.01469 5.71441 3.37202C5.95554 3.68916 6.13373 4.00775 6.32046 4.35554C6.53012 4.74554 6.72772 5.11964 6.98266 5.479C7.15557 5.72329 7.61282 6.20869 7.90158 6.24512C8.60672 6.33387 8.56261 4.64898 8.51027 4.2373C8.46028 3.84094 8.44705 3.42059 8.46028 3.01844C8.47175 2.67557 8.50321 2.19248 8.29649 1.91234C7.9598 1.45556 7.20997 1.79756 7.15115 1.1838C7.27524 1.00947 7.24878 0.854802 8.07624 0.587093C8.72757 0.376337 9.14836 0.382986 9.57797 0.416811C10.4543 0.485907 11.3832 0.252601 12.2286 0.531874C13.036 0.799294 12.9114 1.92766 12.8843 2.60416C12.8481 3.52784 12.8867 4.42898 12.8843 5.36596C12.8831 5.79296 12.8661 6.20782 13.3948 6.17342C13.8911 6.14075 13.9414 5.73052 14.1781 5.39169C14.5078 4.91958 14.8098 4.44112 15.1453 3.97046C15.5972 3.33472 15.7334 2.62035 16.1589 1.969C16.3112 1.7357 16.4421 1.22659 16.6764 1.04243C16.854 0.90337 17.191 0.962926 17.4057 0.962926H17.9161C18.3072 0.967551 18.706 0.973044 19.1073 0.986921C19.6857 1.00658 20.3335 0.883134 20.9072 0.962637C23.382 1.30609 17.7968 6.5108 18.0873 7.4394C18.2884 8.08063 19.5622 8.79905 20.0221 9.32464C20.6352 10.0237 22.5145 11.4169 21.0528 12.3163Z"/>
+                </svg>
+                <svg class="footer__icon" width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.41629 6.04302C7.37681 6.04302 5.71776 7.70208 5.71776 9.74155C5.71776 11.781 7.37681 13.4401 9.41629 13.4401C11.4558 13.4401 13.1148 11.781 13.1148 9.74155C13.1148 7.70208 11.4558 6.04302 9.41629 6.04302ZM9.41629 6.04302C7.37681 6.04302 5.71776 7.70208 5.71776 9.74155C5.71776 11.781 7.37681 13.4401 9.41629 13.4401C11.4558 13.4401 13.1148 11.781 13.1148 9.74155C13.1148 7.70208 11.4558 6.04302 9.41629 6.04302ZM15.7918 0.688965H3.04073C1.58245 0.688965 0.398926 1.87249 0.398926 3.33077V16.0819C0.398926 17.5402 1.58245 18.7237 3.04073 18.7237H15.7918C17.2501 18.7237 18.4336 17.5402 18.4336 16.0819V3.33077C18.4336 1.87249 17.2501 0.688965 15.7918 0.688965ZM9.41629 14.4968C6.79565 14.4968 4.66104 12.3622 4.66104 9.74155C4.66104 7.12084 6.79565 4.9863 9.41629 4.9863C12.0369 4.9863 14.1715 7.12084 14.1715 9.74155C14.1715 12.3622 12.0369 14.4968 9.41629 14.4968ZM15.2283 4.9863C14.6471 4.9863 14.1715 4.51078 14.1715 3.92958C14.1715 3.34838 14.6471 2.87286 15.2283 2.87286C15.8095 2.87286 16.285 3.34838 16.285 3.92958C16.285 4.51078 15.8095 4.9863 15.2283 4.9863ZM9.41629 6.04302C7.37681 6.04302 5.71776 7.70208 5.71776 9.74155C5.71776 11.781 7.37681 13.4401 9.41629 13.4401C11.4558 13.4401 13.1148 11.781 13.1148 9.74155C13.1148 7.70208 11.4558 6.04302 9.41629 6.04302ZM9.41629 6.04302C7.37681 6.04302 5.71776 7.70208 5.71776 9.74155C5.71776 11.781 7.37681 13.4401 9.41629 13.4401C11.4558 13.4401 13.1148 11.781 13.1148 9.74155C13.1148 7.70208 11.4558 6.04302 9.41629 6.04302ZM9.41629 6.04302C7.37681 6.04302 5.71776 7.70208 5.71776 9.74155C5.71776 11.781 7.37681 13.4401 9.41629 13.4401C11.4558 13.4401 13.1148 11.781 13.1148 9.74155C13.1148 7.70208 11.4558 6.04302 9.41629 6.04302Z"/>
+                </svg>
+                <svg class="footer__icon" width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.39089 0.688965C1.64286 0.688965 0.235352 2.12838 0.235352 3.91603V15.1354C0.235352 16.923 1.64286 18.3624 3.39089 18.3624H9.3369V11.4532H7.5504V8.96566H9.3369V6.84043C9.3369 5.17074 10.3925 3.63767 12.824 3.63767C13.8085 3.63767 14.5365 3.73433 14.5365 3.73433L14.4793 6.05729C14.4793 6.05729 13.7368 6.05011 12.9266 6.05011C12.0498 6.05011 11.9092 6.46328 11.9092 7.14919V8.96568H14.549L14.4339 11.4532H11.9092V18.3624H14.3616C16.1096 18.3624 17.5171 16.923 17.5171 15.1354V3.91605C17.5171 2.1284 16.1096 0.688983 14.3616 0.688983H3.39088L3.39089 0.688965Z"/>
+                    </svg>
+            </div>
+        </footer>
     </div>
-    <script src="js/four.js" defer></script>
+    <script src="js/four.js" defer>
+    </script>
 </body>
 
 </html>

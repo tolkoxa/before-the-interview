@@ -1,0 +1,184 @@
+html {
+  font-size: 10px; }
+
+*,
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+.main__style {
+  width: 1180px;
+  margin: 0 auto;
+  padding-top: 104px; }
+
+.scale {
+  transition: 0.2s ease-in-out; }
+  .scale:hover {
+    transform: scale(1.3); }
+
+.cart {
+  background-image: url(../img/backgrounds/cart_bg_01.png);
+  height: 512px;
+  background-repeat: no-repeat;
+  background-position: 70px center;
+  display: flex; }
+  .cart__imgs {
+    width: 730px;
+    padding: 67px 0 0 20px; }
+  .cart__slider {
+    width: 30px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .cart__item {
+    cursor: pointer; }
+  .cart__description {
+    padding-top: 63px; }
+  .cart__stock {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #84E04C;
+    padding-bottom: 8px; }
+  .cart__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 4.8rem;
+    line-height: 5.9rem;
+    letter-spacing: 0.05em;
+    color: #707E93;
+    padding-bottom: 24px; }
+  .cart__text {
+    width: 348px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 143.2%;
+    color: #707E93;
+    padding-bottom: 35px; }
+  .cart__info {
+    display: flex;
+    padding-bottom: 122px; }
+  .cart__weight {
+    font-family: "Montserrat", sans-serif;
+    color: #707E93;
+    padding-right: 33px; }
+    .cart__weight_bold {
+      font-weight: 800;
+      font-size: 2.4rem;
+      line-height: 2.9rem; }
+    .cart__weight_light {
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 2.2rem; }
+  .cart__colors {
+    display: flex;
+    justify-content: space-between;
+    width: 187px;
+    height: 25px;
+    align-items: center; }
+  .cart__color {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%; }
+    .cart__color:hover {
+      cursor: pointer;
+      box-shadow: 0 0 0 8px #707E93; }
+    .cart__color_1 {
+      background-color: #E0E0E0; }
+    .cart__color_2 {
+      background-color: #EFF0C3; }
+    .cart__color_3 {
+      background-color: #000000; }
+    .cart__color_4 {
+      background-color: #ffffff;
+      border: 1px solid #707E93; }
+    .cart__color_5 {
+      background-color: #707E93; }
+      .cart__color_5:hover {
+        border: 1px solid #fff; }
+    .cart__color_6 {
+      background-color: #E30000; }
+    .cart__color_7 {
+      background-color: #4470E2; }
+    .cart__color_active {
+      box-shadow: 0 0 0 7px #707E93;
+      border: none; }
+  .cart__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px; }
+  .cart__btn {
+    width: 284px;
+    height: 71px;
+    background: #fff;
+    border: 1px solid #707E93;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px; }
+    .cart__btn:hover {
+      cursor: pointer;
+      background-color: #707E93; }
+      .cart__btn:hover .cart__minus,
+      .cart__btn:hover .cart__price,
+      .cart__btn:hover .cart__plus {
+        color: #fff;
+        opacity: 1;
+        font-weight: 200; }
+  .cart__minus {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 4.8rem;
+    line-height: 5.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #707E93;
+    opacity: 0.5; }
+  .cart__data {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .cart__number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.05em;
+    color: #fff;
+    display: none; }
+  .cart__multiply {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.05em;
+    color: #fff;
+    padding: 0 15px;
+    display: none; }
+  .cart__price {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.05em;
+    color: #707E93; }
+  .cart__plus {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 4.8rem;
+    line-height: 5.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #707E93;
+    opacity: 0.5; }
+  .cart__heart {
+    stroke: #707E93; }
+    .cart__heart:hover {
+      cursor: pointer;
+      fill: #707E93; }

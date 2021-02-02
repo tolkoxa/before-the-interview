@@ -28,7 +28,7 @@ class Harz {
 
     }
     _init() {
-        document.getElementById('stock').insertAdjacentHTML('beforeend', `${this.stock} in stock`);
+        document.getElementById('stock').innerHTML = `${this.stock} in stock`;
         this.changeCount();
     }
     chamgeImg(id) {
@@ -73,15 +73,7 @@ class Harz {
                 this.count--;
                 number.innerHTML = this.count;
             } else if (this.count == 1 && !this.first) {
-                // button.className = 'cart__btn';
-                // btn_m.style.color = '#707E93';
-                // btn_m.style.opacity = '0.5';
-                // btn_p.style.color = '#707E93';
-                // btn_p.style.opacity = '0.5';
-                // number.style.color = '#707E93';
-                // price.style.color = '#707E93';
-                // multiply.style.display = 'none';
-                // number.style.display = 'none';
+
                 this.count = 0;
                 btnBlock.innerHTML = '';
                 let str = `
@@ -101,6 +93,8 @@ class Harz {
                     </div>
                 `;
                 btnBlock.insertAdjacentHTML('beforeend', str);
+                this.first = true;
+                this._init();
             }
         });
 

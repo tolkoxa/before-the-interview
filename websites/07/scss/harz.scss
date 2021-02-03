@@ -31,9 +31,11 @@ body {
     background-repeat: no-repeat;
     background-position: 70px center;
     display: flex;
+    border: 1px solid;
     &__imgs {
         width: 730px;
         padding: 67px 0 0 20px;
+        border: 1px solid green;
     }
     &__slider {
         width: 30px;
@@ -223,6 +225,28 @@ body {
         &:hover {
             cursor: pointer;
             fill: $color_grey;
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:730px) {
+    .main__style {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .cart {
+        flex-direction: column;
+        width: 100%;
+        background-position: center top;
+        background-image: url(../img/backgrounds/cart_bg_01_m.png);
+        &__imgs {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        &__slider {
+            flex-direction: row;
         }
     }
 }

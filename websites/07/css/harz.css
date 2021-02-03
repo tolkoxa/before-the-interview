@@ -22,10 +22,12 @@ body {
   height: 512px;
   background-repeat: no-repeat;
   background-position: 70px center;
-  display: flex; }
+  display: flex;
+  border: 1px solid; }
   .cart__imgs {
     width: 730px;
-    padding: 67px 0 0 20px; }
+    padding: 67px 0 0 20px;
+    border: 1px solid green; }
   .cart__slider {
     width: 30px;
     height: 190px;
@@ -182,3 +184,21 @@ body {
     .cart__heart:hover {
       cursor: pointer;
       fill: #707E93; }
+
+@media screen and (min-width: 320px) and (max-width: 730px) {
+  .main__style {
+    width: 100%;
+    padding-top: 50px; }
+
+  .cart {
+    flex-direction: column;
+    width: 100%;
+    background-position: center top;
+    background-image: url(../img/backgrounds/cart_bg_01_m.png); }
+    .cart__imgs {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; }
+    .cart__slider {
+      flex-direction: row; } }

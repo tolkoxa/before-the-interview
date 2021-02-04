@@ -32,18 +32,10 @@ class Harz {
         this.changeCount();
     }
     chamgeImg(id) {
-        let more;
-        if (innerWidth < 700) {
-            more = '_m';
-        } else {
-            more = '';
-        }
-        this.mainimg.style.backgroundImage = `url(img/backgrounds/cart_bg_0${id}${more}.png)`;
-        if (innerWidth > 1000) {
-            (id > 1) ? this.mainimg.style.backgroundPosition = `150px center`: this.mainimg.style.backgroundPosition = `70px center`;
-        } else {
-            this.mainimg.style.backgroundPosition = `center center`;
-        }
+        let small = '';
+        (innerWidth < 1024) ? small = '_m': small = '';
+
+        this.mainimg.style.backgroundImage = `url(img/backgrounds/cart_bg_0${id}${small}.png)`;
     }
     changeColor(id) {
         console.log(id);

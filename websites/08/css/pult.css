@@ -1,0 +1,103 @@
+html {
+  font-size: 10px; }
+
+*,
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+.wrapper {
+  width: 640px;
+  margin: 0 auto;
+  border: 1px solid; }
+
+.main__style {
+  width: 92%;
+  margin: 0 auto; }
+
+.slider__topText {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px; }
+.slider__title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 100%;
+  color: #A89365;
+  text-transform: uppercase; }
+.slider__portfolio-link {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  color: #A89365;
+  text-decoration: none; }
+.slider__arr {
+  padding-left: 8px; }
+.slider__img {
+  padding-bottom: 10px; }
+.slider__subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 100%;
+  color: #A89365;
+  padding-bottom: 10px; }
+.slider__text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #575757; }
+.slider__pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px; }
+.slider__item {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #F2F2F2; }
+  .slider__item:hover {
+    cursor: pointer;
+    background-color: #A89365; }
+  .slider__item_active {
+    background-color: #A89365; }
+.slider__buttons {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+.slider__btn {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #A89365;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase; }
+  .slider__btn_specialist {
+    background-color: #fff;
+    color: #A89365; }
+    .slider__btn_specialist:hover {
+      cursor: pointer;
+      background-color: #A89365;
+      color: #fff; }
+  .slider__btn_project {
+    background-color: #A89365;
+    color: #fff; }
+    .slider__btn_project:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: #A89365; }

@@ -10,121 +10,9 @@ body {
     box-sizing: border-box;
 }
 
-//320px
-// .wrapper {
-//     width: 320px;
-//     margin: 0 auto;
-//     border: 1px solid;
-// }
-// .main__style {
-//     width: 92%;
-//     margin: 0 auto;
-// }
-// .slider {
-//     &__topText {
-//         padding-bottom: 20px;
-//     }
-//     &__title {
-//         font-family: $font_main;
-//         font-weight: 600;
-//         font-size: 2.4rem;
-//         line-height: 100%;
-//         color: $color_gold;
-//         text-transform: uppercase;
-//         padding-bottom: 10px;
-//     }
-//     &__portfolio-link {
-//         font-family: $font_main;
-//         font-weight: 400;
-//         font-size: 1.8rem;
-//         line-height: 2.3rem;
-//         text-transform: uppercase;
-//         color: $color_gold;
-//         text-decoration: none;
-//     }
-//     &__arr {
-//         padding-left: 8px;
-//     }
-//     &__main {}
-//     &__img {
-//         padding-bottom: 10px;
-//     }
-//     &__subtitle {
-//         font-family: $font_main;
-//         font-weight: 500;
-//         font-size: 2.4rem;
-//         line-height: 100%;
-//         color: $color_gold;
-//         padding-bottom: 10px;
-//     }
-//     &__text {
-//         font-family: $font_main;
-//         font-weight: 400;
-//         font-size: 1.6rem;
-//         line-height: 2.4rem;
-//         color: $color_text;
-//     }
-//     &__pagination {
-//         width: 100%;
-//         display: flex;
-//         justify-content: space-between;
-//         padding: 20px 0px;
-//     }
-//     &__item {
-//         width: 12px;
-//         height: 12px;
-//         border-radius: 50%;
-//         background-color: $bgcolor_pagination;
-//         &:hover {
-//             cursor: pointer;
-//             background-color: $color_gold;
-//         }
-//         &_active {
-//             background-color: $color_gold;
-//         }
-//     }
-//     &__buttons {
-//         width: 100%;
-//         height: 110px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         align-items: center;
-//     }
-//     &__btn {
-//         width: 100%;
-//         height: 45px;
-//         border: 1px solid $color_gold;
-//         font-family: $font_main;
-//         font-weight: 400;
-//         font-size: 1.8rem;
-//         line-height: 2.3rem;
-//         display: flex;
-//         align-items: center;
-//         text-align: center;
-//         text-transform: uppercase;
-//         &_specialist {
-//             background-color: $color_white;
-//             color: $color_gold;
-//             &:hover {
-//                 cursor: pointer;
-//                 background-color: $color_gold;
-//                 color: $color_white;
-//             }
-//         }
-//         &_project {
-//             background-color: $color_gold;
-//             color: $color_white;
-//             &:hover {
-//                 cursor: pointer;
-//                 background-color: $color_white;
-//                 color: $color_gold;
-//             }
-//         }
-//     }
-// }
+// 320px
 .wrapper {
-    width: 640px;
+    width: 320px;
     margin: 0 auto;
     border: 1px solid;
 }
@@ -136,9 +24,6 @@ body {
 
 .slider {
     &__topText {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
         padding-bottom: 20px;
     }
     &__title {
@@ -148,7 +33,7 @@ body {
         line-height: 100%;
         color: $color_gold;
         text-transform: uppercase;
-        // padding-bottom: 10px;
+        padding-bottom: 10px;
     }
     &__portfolio-link {
         font-family: $font_main;
@@ -240,3 +125,119 @@ body {
         }
     }
 }
+
+// .wrapper {
+//     width: 640px;
+//     margin: 0 auto;
+//     border: 1px solid;
+// }
+// .main__style {
+//     width: 92%;
+//     margin: 0 auto;
+// }
+// .slider {
+//     &__topText {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: flex-end;
+//         padding-bottom: 20px;
+//     }
+//     &__title {
+//         font-family: $font_main;
+//         font-weight: 600;
+//         font-size: 2.4rem;
+//         line-height: 100%;
+//         color: $color_gold;
+//         text-transform: uppercase;
+//         // padding-bottom: 10px;
+//     }
+//     &__portfolio-link {
+//         font-family: $font_main;
+//         font-weight: 400;
+//         font-size: 1.8rem;
+//         line-height: 2.3rem;
+//         text-transform: uppercase;
+//         color: $color_gold;
+//         text-decoration: none;
+//     }
+//     &__arr {
+//         padding-left: 8px;
+//     }
+//     &__main {}
+//     &__img {
+//         padding-bottom: 10px;
+//     }
+//     &__subtitle {
+//         font-family: $font_main;
+//         font-weight: 500;
+//         font-size: 2.4rem;
+//         line-height: 100%;
+//         color: $color_gold;
+//         padding-bottom: 10px;
+//     }
+//     &__text {
+//         font-family: $font_main;
+//         font-weight: 400;
+//         font-size: 1.6rem;
+//         line-height: 2.4rem;
+//         color: $color_text;
+//     }
+//     &__pagination {
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-between;
+//         padding: 20px 0px;
+//     }
+//     &__item {
+//         width: 12px;
+//         height: 12px;
+//         border-radius: 50%;
+//         background-color: $bgcolor_pagination;
+//         &:hover {
+//             cursor: pointer;
+//             background-color: $color_gold;
+//         }
+//         &_active {
+//             background-color: $color_gold;
+//         }
+//     }
+//     &__buttons {
+//         width: 100%;
+//         height: 110px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+//     &__btn {
+//         width: 100%;
+//         height: 45px;
+//         border: 1px solid $color_gold;
+//         font-family: $font_main;
+//         font-weight: 400;
+//         font-size: 1.8rem;
+//         line-height: 2.3rem;
+//         display: flex;
+//         align-items: center;
+//         text-align: center;
+//         text-transform: uppercase;
+//         &_specialist {
+//             background-color: $color_white;
+//             color: $color_gold;
+//             &:hover {
+//                 cursor: pointer;
+//                 background-color: $color_gold;
+//                 color: $color_white;
+//             }
+//         }
+//         &_project {
+//             background-color: $color_gold;
+//             color: $color_white;
+//             &:hover {
+//                 cursor: pointer;
+//                 background-color: $color_white;
+//                 color: $color_gold;
+//             }
+//         }
+//     }
+// }

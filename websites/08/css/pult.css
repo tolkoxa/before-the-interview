@@ -8,7 +8,7 @@ body {
   box-sizing: border-box; }
 
 .wrapper {
-  width: 640px;
+  width: 320px;
   margin: 0 auto;
   border: 1px solid; }
 
@@ -17,9 +17,6 @@ body {
   margin: 0 auto; }
 
 .slider__topText {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   padding-bottom: 20px; }
 .slider__title {
   font-family: "Quicksand", sans-serif;
@@ -27,7 +24,8 @@ body {
   font-size: 2.4rem;
   line-height: 100%;
   color: #A89365;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-bottom: 10px; }
 .slider__portfolio-link {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;

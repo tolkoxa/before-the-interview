@@ -272,9 +272,6 @@ class Four {
         if (id == 5) { subArr = this.typesRoom5 };
 
         let str = '';
-        console.log(this.allTypes);
-        console.log('---');
-        console.log(subArr);
         subArr.forEach(x => {
             let item = this.allTypes.find(item => item.id === x);
             // console.log(item.name)

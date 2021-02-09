@@ -44,7 +44,8 @@ class Pult {
             str_main = `${str_main}<div class="slider__item">${str_img}${str_subtitle}${str_text}</div>`;
 
             //
-            if ((this.mainStyle.offsetWidth > 640) && (this.mainStyle.offsetWidth < 1279)) {
+            // console.log(this.mainStyle.innerWidth);
+            if ((this.mainStyle.offsetWidth > 320) && (this.mainStyle.offsetWidth < 1279)) {
                 if (e.id % 2 !== 0) {
                     str_pag = `${str_pag}
                         <div class="slider__pag ${((e.id == 1)? 'slider__pag_active' : '')}" name="pagination" data-pag="${e.id}" id="pag${e.id}"></div>`;

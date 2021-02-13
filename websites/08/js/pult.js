@@ -4,6 +4,11 @@ class Pult {
         this.windowWidth = innerWidth;
         this._init();
         this.mainStyle = document.querySelector('.main__style');
+        this.wrapper = document.getElementById('wrapper');
+        this.display = 4;
+        this.count = 0;
+        this.length;
+        this.remains;
     }
 
     _init() {
@@ -13,17 +18,11 @@ class Pult {
         let response = await fetch('data/pult.json');
         this.allPortfolio = await response.json();
         this.renderItems();
+        this.length = this.allPortfolio.length;
+        this.remains = this.length - this.display;
     }
 
-    // renderPagination(){
-    //     let i = this.allPortfolio.length;
-    //     return {
-
-    //     }
-    // }
-
     renderItems() {
-        // let str_pagination = this.renderPagination();
         let str_subtitle = '';
         let str_text = '';
         let str_img = '';
@@ -72,6 +71,43 @@ class Pult {
                 document.getElementById(`pag${e.dataset.pag}`).classList.add('slider__pag_active');
             }
         });
+
+        this.wrapper.addEventListener('click', (evt) => {
+            let e = evt.target,
+                step = +e.dataset.arrow;
+
+            if (e.name === 'wrapper') {
+                this.changeSlider(step);
+            }
+        });
+    }
+    changeSlider(step) {
+        console.log(step);
+        console.log(typeof step);
+        if (step === -1) {
+            if (this.remains >= this.display) {
+                this.count = this.count + this.display;
+                this.remains = this.remains - this.display;
+            } else if (this.remains < this.display) {
+                this.count = this.count + this.remains;
+                this.remains = 0;
+            };
+        } else if (step === 1) {
+            if (this.remains == 0) {
+                this.count = (this.count - this.display);
+                step = step * -1;
+                this.remains = this.display;
+            } else if (this.count >= this.display) {
+                this.count = this.count - this.display;
+                this.remains = this.remains + this.display;
+                step = step * -1;
+            } else if (this.count < this.display) {
+                this.remains = this.remains + this.count;
+                this.count = 0;
+            }
+        }
+
+        document.getElementById('sliderline').style.left = (450 * this.count * step) + 'px';
     }
 }
 

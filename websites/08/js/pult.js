@@ -71,17 +71,50 @@ class Pult {
                 document.getElementById(`pag${e.dataset.pag}`).classList.add('slider__pag_active');
             }
         });
+        console.log(this.wrapper.offsetWidth);
+        let arr_width;
+        let arr_height;
+        if (this.wrapper.offsetWidth >= 1920) {
+            arr_width = 16;
+            arr_height = 32;
+        } else if (this.wrapper.offsetWidth >= 1280) {
+            arr_width = 10;
+            arr_height = 18;
+        } else if (this.wrapper.offsetWidth < 1280) {
+            document.getElementById('leftarrow').style.display = 'none';
+            document.getElementById('rightarrow').style.display = 'none';
+        }
+
+        let str_left_arrow = `
+            <svg width="${arr_width}" height="${arr_height}" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg" name="wrapper" data-arrow="1">
+                <path d="M9 17L1 9L9 1" stroke="#A89365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" name="wrapper" data-arrow="1"/>
+            </svg>
+        `;
+
+        let str_right_arrow = `
+            <svg width="${arr_width}" height="${arr_height}" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 17L9 9L1 1" stroke="#A89365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;
+
+        document.getElementById('leftarrow').innerHTML = '';
+        document.getElementById('rightarrow').innerHTML = '';
+
+        document.getElementById('leftarrow').insertAdjacentHTML('beforeend', str_left_arrow);
+        document.getElementById('rightarrow').insertAdjacentHTML('beforeend', str_right_arrow);
 
         this.wrapper.addEventListener('click', (evt) => {
             let e = evt.target,
                 step = +e.dataset.arrow;
 
             if (e.name === 'wrapper') {
-                this.changeSlider(step);
+                let wrapwidth;
+                (this.wrapper.offsetWidth < 1920) ? wrapwidth = 300: wrapwidth = 450;
+                this.changeSlider(step, wrapwidth);
             }
         });
     }
-    changeSlider(step) {
+    changeSlider(step, width) {
         console.log(step);
         console.log(typeof step);
         if (step === -1) {
@@ -107,10 +140,8 @@ class Pult {
             }
         }
 
-        document.getElementById('sliderline').style.left = (450 * this.count * step) + 'px';
+        document.getElementById('sliderline').style.left = (width * this.count * step) + 'px';
     }
 }
 
 let resultTest = new Pult();
-
-//element.offsetWidth

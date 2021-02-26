@@ -12,10 +12,19 @@ body {
 
 .wrapper {
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
-    width: 1000px;
+    width: 980px;
+    padding: 0 10px;
+}
+
+.none {
+    display: none;
 }
 
 .header {
@@ -68,10 +77,10 @@ body {
         align-items: center;
     }
     &__items {
-        width: 650px;
+        // width: 650px;
         height: 58px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         margin: 0 auto;
         color: $color_white;
@@ -83,12 +92,19 @@ body {
         color: $color_white;
         text-decoration: none;
         font-weight: 300;
+        list-style: none;
+        cursor: pointer;
         &:hover {
             text-decoration: underline;
         }
     }
     &__line {
+        list-style: none;
         padding: 0 15px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -105,7 +121,7 @@ body {
     background-image: url('../img/slider_bg.png');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .data {

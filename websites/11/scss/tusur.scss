@@ -1,0 +1,104 @@
+@import '_param';
+html {
+    font-size: 10px;
+}
+
+*,
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 215px;
+}
+
+.header {
+    &__style {
+        width: 100%;
+        height: 109px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__logo {
+        padding-right: 57px;
+        display: block;
+    }
+    &__contact {
+        display: flex;
+    }
+    &__tel {
+        &_style {
+            width: 24px;
+            height: 24px;
+        }
+        &_color {
+            fill: $color-yellow;
+        }
+    }
+    &__tel-number {}
+    &__number {
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 100%;
+        color: $color-nav;
+    }
+    &__tel-text {
+        width: 85px;
+        padding-top: 4px;
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 100%;
+        color: $color_text;
+    }
+}
+
+.nav {
+    &__style {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__item {
+        display: block;
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 100%;
+        color: $color-nav;
+        padding-right: 46px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $color-yellow;
+            color: $color-yellow;
+        }
+    }
+}
+
+.main {
+    &__style {
+        width: 100%;
+    }
+}
+
+.cover {
+    width: 100%;
+    height: 100px;
+    background-color: $color-blue;
+}
+
+.cover-light {
+    width: 100%;
+    height: 100px;
+    background-color: $color-blue_light;
+}

@@ -1,0 +1,77 @@
+html {
+  font-size: 10px; }
+
+*,
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+.wrapper {
+  width: 100%;
+  padding-top: 40px; }
+
+.container {
+  width: 100%;
+  padding-left: 215px; }
+
+.header__style {
+  width: 100%;
+  height: 109px;
+  display: flex;
+  justify-content: flex-start; }
+.header__logo {
+  padding-right: 57px;
+  display: block; }
+.header__contact {
+  display: flex; }
+.header__tel_style {
+  width: 24px;
+  height: 24px; }
+.header__tel_color {
+  fill: #FAB339; }
+.header__number {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 100%;
+  color: #1B2431; }
+.header__tel-text {
+  width: 85px;
+  padding-top: 4px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 100%;
+  color: #142850; }
+
+.nav__style {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; }
+.nav__item {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  color: #1B2431;
+  padding-right: 46px;
+  text-decoration: none; }
+  .nav__item:hover {
+    text-decoration: underline;
+    text-decoration-color: #FAB339;
+    color: #FAB339; }
+
+.main__style {
+  width: 100%; }
+
+.cover {
+  width: 100%;
+  height: 100px;
+  background-color: #195CCB; }
+
+.cover-light {
+  width: 100%;
+  height: 100px;
+  background-color: #F3F8FF; }

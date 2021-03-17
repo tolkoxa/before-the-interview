@@ -8,16 +8,16 @@ body {
   box-sizing: border-box; }
 
 .wrapper {
-  width: 100%;
+  width: 1600px;
   padding-top: 40px; }
 
 .container {
   width: 100%;
-  padding-left: 215px; }
+  padding-left: 214px; }
 
 .header__style {
   width: 100%;
-  height: 109px;
+  height: 65px;
   display: flex;
   justify-content: flex-start; }
 .header__logo {
@@ -68,10 +68,99 @@ body {
 
 .cover {
   width: 100%;
-  height: 100px;
-  background-color: #195CCB; }
+  background-color: #195CCB;
+  display: flex; }
+  .cover__triangle {
+    width: 214px;
+    height: 222px;
+    border-top: 222px solid #fff;
+    border-right: 214px solid transparent; }
+  .cover__text {
+    width: 617px;
+    padding-top: 101px; }
+  .cover__foto {
+    max-width: 770px;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end; }
+  .cover__student {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2; }
 
-.cover-light {
-  width: 100%;
-  height: 100px;
-  background-color: #F3F8FF; }
+.text_yellow {
+  color: #FAB339; }
+.text__subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 20px; }
+.text__main {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 4.4rem;
+  line-height: 140%;
+  color: #fff;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2; }
+.text__calltoaction {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 29px;
+  color: #fff;
+  padding-bottom: 50px; }
+
+.big-underline {
+  display: inline-block;
+  position: relative; }
+  .big-underline::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 2px;
+    width: 99%;
+    height: 19px;
+    background-color: #FAB339;
+    z-index: -1; }
+
+.cover__bg-foto {
+  width: 620px;
+  height: 455px;
+  background-image: url("../img/cover-students.jpg");
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid green;
+  background-repeat: no-repeat;
+  position: relative; }
+  .cover__bg-foto:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 90, 174, 0.6);
+    z-index: 5; }
+  .cover__bg-foto_1line {
+    width: 100%;
+    display: flex; }
+  .cover__bg-foto_1-1 {
+    width: 63px;
+    height: 70px;
+    background-color: #195CCB; }
+  .cover__bg-foto_1-2 {
+    width: 495px;
+    height: 70px;
+    background-color: #195CCB; }
+  .cover__bg-foto_1-3 {
+    width: 60px;
+    height: 70px;
+    border-top: 70px solid #195CCB;
+    border-right: 60px solid transparent; }

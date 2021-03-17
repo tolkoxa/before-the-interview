@@ -11,19 +11,19 @@ body {
 }
 
 .wrapper {
-    width: 100%;
+    width: 1600px;
     padding-top: 40px;
 }
 
 .container {
     width: 100%;
-    padding-left: 215px;
+    padding-left: 214px;
 }
 
 .header {
     &__style {
         width: 100%;
-        height: 109px;
+        height: 65px;
         display: flex;
         justify-content: flex-start;
     }
@@ -93,12 +93,140 @@ body {
 
 .cover {
     width: 100%;
-    height: 100px;
     background-color: $color-blue;
+    display: flex;
+    &__triangle {
+        width: 214px;
+        height: 222px;
+        border-top: 222px solid $color-white;
+        border-right: 214px solid transparent;
+    }
+    &__text {
+        width: 617px;
+        padding-top: 101px;
+    }
+    // .cover__buttons
+    &__buttons {}
+    // .cover__btn
+    &__btn {
+        // .cover__btn_order
+        &_order {}
+    }
+    // .cover__choose
+    &__choose {}
+    // .cover__foto
+    &__foto {
+        max-width: 770px;
+        width: 100%;
+        border: 1px solid red;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__student {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+    }
 }
 
-.cover-light {
-    width: 100%;
-    height: 100px;
-    background-color: $color-blue_light;
+.text {
+    &_yellow {
+        color: $color-yellow;
+    }
+    &__subtitle {
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $color-white;
+        padding-bottom: 20px;
+    }
+    &__main {
+        font-family: $font-main;
+        font-weight: 800;
+        font-size: 4.4rem;
+        line-height: 140%;
+        color: $color-white;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+    &__calltoaction {
+        font-family: $font-main;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 29px;
+        color: $color-white;
+        padding-bottom: 50px;
+    }
 }
+
+.big-underline {
+    display: inline-block;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 2px;
+        width: 99%;
+        height: 19px;
+        background-color: $color-yellow;
+        z-index: -1;
+    }
+}
+
+.cover {
+    &__bg-foto {
+        width: 620px;
+        height: 455px;
+        background-image: url('../img/cover-students.jpg');
+        background-position: center center;
+        background-size: cover;
+        border: 1px solid green;
+        background-repeat: no-repeat;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 90, 174, 0.6);
+            z-index: 5;
+        }
+        &_1line {
+            width: 100%;
+            display: flex;
+        }
+        &_1-1 {
+            width: 63px;
+            height: 70px;
+            background-color: $color-blue;
+        }
+        &_1-2 {
+            width: 495px;
+            height: 70px;
+            background-color: $color-blue;
+        }
+        &_1-3 {
+            width: 60px;
+            height: 70px;
+            border-top: 70px solid $color-blue;
+            border-right: 60px solid transparent;
+        }
+        // .cover__bg-foto_2line
+        &_2line {}
+        // .cover__bg-foto_2-1
+        &_2-1 {}
+        // .cover__bg-foto_2-2
+        &_2-2 {}
+        // .cover__bg-foto_2-3
+        &_2-3 {}
+    }
+}
+
+.cover-light {}

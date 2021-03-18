@@ -32,6 +32,7 @@ body {
         display: block;
     }
     &__contact {
+        padding-left: 100px;
         display: flex;
     }
     &__tel {
@@ -50,6 +51,7 @@ body {
         font-size: 1.8rem;
         line-height: 100%;
         color: $color-nav;
+        text-decoration: none;
     }
     &__tel-text {
         width: 85px;
@@ -64,9 +66,10 @@ body {
 
 .nav {
     &__style {
-        width: 100%;
+        max-width: 800px;
         display: flex;
         justify-content: flex-start;
+        padding-top: 10px;
     }
     &__item {
         display: block;
@@ -95,6 +98,8 @@ body {
     width: 100%;
     background-color: $color-blue;
     display: flex;
+    padding-bottom: 230px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     &__triangle {
         width: 214px;
         height: 222px;
@@ -105,28 +110,112 @@ body {
         width: 617px;
         padding-top: 101px;
     }
-    // .cover__buttons
-    &__buttons {}
-    // .cover__btn
-    &__btn {
-        // .cover__btn_order
-        &_order {}
+    &__buttons {
+        display: flex;
     }
-    // .cover__choose
-    &__choose {}
-    // .cover__foto
+    &__btn {
+        &_order {
+            width: 218px;
+            height: 76px;
+            background-color: $color-yellow;
+            margin-right: 18px;
+            &:hover {
+                cursor: pointer;
+                background-color: $color-white;
+                .btn_item12 {
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+    &__choose {
+        width: 285px;
+        height: 65px;
+        background: rgba(255, 206, 121, 0.15);
+        border: 1px solid $color-yellow;
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        color: $color-white;
+        &:hover {
+            cursor: pointer;
+            background-color: $color-yellow;
+            color: $color-black;
+        }
+    }
     &__foto {
         max-width: 770px;
         width: 100%;
-        border: 1px solid red;
         display: flex;
         justify-content: flex-end;
+        position: relative;
+        padding-top: 55px;
     }
     &__student {
         position: absolute;
-        top: 0px;
+        top: -35px;
         left: 0px;
-        z-index: 2;
+        z-index: 10;
+        padding-left: 130px;
+    }
+}
+
+.btn {
+    &_line1 {
+        display: flex;
+        width: 100%;
+        height: 65px;
+    }
+    &_item11 {
+        width: 11px;
+        height: 13px;
+        border-top: 13px solid $color-blue;
+        border-right: 11px solid transparent;
+    }
+    &_item12 {
+        width: 196px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+    &_item13 {
+        width: 11px;
+        display: flex;
+        align-items: flex-end;
+        width: 11px;
+        height: 65px;
+        border-bottom: 16px solid $color-blue;
+        border-left: 11px solid transparent;
+    }
+    &_line2 {
+        width: 100%;
+        height: 11px;
+        display: flex;
+    }
+    &_item21 {
+        width: 11px;
+        height: 13px;
+        border-bottom: 13px solid $color-blue;
+        border-left: 11px solid transparent;
+    }
+    &_item22 {
+        width: 100%;
+        height: 11px;
+        background-color: $color-blue;
+    }
+    &_item23 {
+        background-color: $color-blue;
     }
 }
 
@@ -182,22 +271,11 @@ body {
     &__bg-foto {
         width: 620px;
         height: 455px;
-        background-image: url('../img/cover-students.jpg');
-        background-position: center center;
+        background-image: linear-gradient(to right, rgba(0, 90, 174, 0.6), rgba(0, 90, 174, 0.6)), url('../img/cover-students.jpg'), ;
+        background-position: left center;
         background-size: cover;
-        border: 1px solid green;
         background-repeat: no-repeat;
         position: relative;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 90, 174, 0.6);
-            z-index: 5;
-        }
         &_1line {
             width: 100%;
             display: flex;
@@ -218,15 +296,32 @@ body {
             border-top: 70px solid $color-blue;
             border-right: 60px solid transparent;
         }
-        // .cover__bg-foto_2line
-        &_2line {}
-        // .cover__bg-foto_2-1
-        &_2-1 {}
-        // .cover__bg-foto_2-2
-        &_2-2 {}
-        // .cover__bg-foto_2-3
-        &_2-3 {}
+        &_2line {
+            display: flex;
+            height: 385px;
+        }
+        &_2-1 {
+            width: 63px;
+            height: 98px;
+            border-top: 98px solid $color-blue;
+            border-right: 63px solid transparent;
+        }
+        &_2-2 {
+            width: 495px;
+        }
+        &_2-3 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 60px;
+            border-bottom: 67px solid $color-blue;
+            border-left: 60px solid transparent;
+        }
     }
 }
 
-.cover-light {}
+.cover-light {
+    width: 100%;
+    height: 415px;
+    background-color: $color-blue_light;
+}

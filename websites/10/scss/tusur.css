@@ -73,7 +73,7 @@ body {
   width: 100%;
   background-color: #195CCB;
   display: flex;
-  padding-bottom: 230px;
+  padding-bottom: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
   .cover__triangle {
     width: 214px;
@@ -126,6 +126,47 @@ body {
     left: 0px;
     z-index: 10;
     padding-left: 130px; }
+  .cover__bg-foto {
+    width: 620px;
+    height: 455px;
+    background-image: linear-gradient(to right, rgba(0, 90, 174, 0.6), rgba(0, 90, 174, 0.6)), url("../img/cover-students.jpg");
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; }
+    .cover__bg-foto_1line {
+      width: 100%;
+      display: flex; }
+    .cover__bg-foto_1-1 {
+      width: 63px;
+      height: 70px;
+      background-color: #195CCB; }
+    .cover__bg-foto_1-2 {
+      width: 495px;
+      height: 70px;
+      background-color: #195CCB; }
+    .cover__bg-foto_1-3 {
+      width: 60px;
+      height: 70px;
+      border-top: 70px solid #195CCB;
+      border-right: 60px solid transparent; }
+    .cover__bg-foto_2line {
+      display: flex;
+      height: 385px; }
+    .cover__bg-foto_2-1 {
+      width: 63px;
+      height: 98px;
+      border-top: 98px solid #195CCB;
+      border-right: 63px solid transparent; }
+    .cover__bg-foto_2-2 {
+      width: 495px; }
+    .cover__bg-foto_2-3 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      width: 60px;
+      border-bottom: 67px solid #195CCB;
+      border-left: 60px solid transparent; }
 
 .btn_line1 {
   display: flex;
@@ -211,49 +252,58 @@ body {
     background-color: #FAB339;
     z-index: -1; }
 
-.cover__bg-foto {
-  width: 620px;
-  height: 455px;
-  background-image: linear-gradient(to right, rgba(0, 90, 174, 0.6), rgba(0, 90, 174, 0.6)), url("../img/cover-students.jpg");
-  background-position: left center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative; }
-  .cover__bg-foto_1line {
-    width: 100%;
-    display: flex; }
-  .cover__bg-foto_1-1 {
-    width: 63px;
-    height: 70px;
-    background-color: #195CCB; }
-  .cover__bg-foto_1-2 {
-    width: 495px;
-    height: 70px;
-    background-color: #195CCB; }
-  .cover__bg-foto_1-3 {
-    width: 60px;
-    height: 70px;
-    border-top: 70px solid #195CCB;
-    border-right: 60px solid transparent; }
-  .cover__bg-foto_2line {
-    display: flex;
-    height: 385px; }
-  .cover__bg-foto_2-1 {
-    width: 63px;
-    height: 98px;
-    border-top: 98px solid #195CCB;
-    border-right: 63px solid transparent; }
-  .cover__bg-foto_2-2 {
-    width: 495px; }
-  .cover__bg-foto_2-3 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 60px;
-    border-bottom: 67px solid #195CCB;
-    border-left: 60px solid transparent; }
-
 .cover-light {
   width: 100%;
   height: 415px;
   background-color: #F3F8FF; }
+  .cover-light_line1 {
+    width: 123px;
+    height: 152px;
+    border-top: 152px solid #195CCB;
+    border-right: 123px solid transparent; }
+  .cover-light_line2 {
+    display: flex; }
+
+.promo__items {
+  display: flex;
+  margin: -259px auto 0px auto;
+  position: relative;
+  z-index: 20; }
+.promo__item {
+  width: 280px;
+  height: 365px;
+  margin: 0 15px; }
+.promo__plate {
+  width: 100%;
+  height: 265px;
+  padding: 40px 20px 0 30px;
+  border-radius: 6px 6px 0 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+.promo__plate-top {
+  width: 220px;
+  height: 50%; }
+.promo__number {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 5rem; }
+  .promo__number_black {
+    color: #000; }
+  .promo__number_blue {
+    color: #3B83FA; }
+.promo__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: #142850; }
+.promo__plate-bottom {
+  width: 220px;
+  height: 50%; }
+.promo__foot {
+  width: 100%;
+  height: 100px;
+  background-color: #E6EDFA; }

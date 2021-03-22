@@ -18,19 +18,48 @@
     <meta name="description" content="Виджет новостной ленты от Андрея Халимоненко.">
     <meta property="og:url" content="http://before-the-interview.tolkoxa.ru/websites/11/">
     <meta name="author" content="Андрей Халимоненко">
-    <meta name="theme-color" content="#FEEBEF">
-    <meta name="msapplication-navbutton-color" content="#FEEBEF">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#FEEBEF">
+    <meta name="theme-color" content="#047e69">
+    <meta name="msapplication-navbutton-color" content="#047e69">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#047e69">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="image_src" href="./img/snippet.jpg">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/news.css">
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="wrapper__line-top">
+            <div class="container"></div>
+        </div>
+        <div class="wrapper__line-bottom">
+            <div class="news">
+                <p class="news__update">Время обновления:
+                    <a class="news__time" href="#" id="time"> 01:59</a>
+                </p>
+                <span class="news-line news_padding">|</span>
+                <span class="news__count news_padding fa fa-newspaper-o" aria-hidden="true" id="newnews">
+                    <span class="news__number invisible" id="number"></span>
+                </span>
+                <div class="window invisible" id="window">
+                    <div class="window__header">
+                        <nav class="nav-style" id="header">
+                            <p class="news__header news__header_selected" name="header" data-menu="all" id="all">Все новости</p>
+                            <p class="news__header" name="header" data-menu="main" id="main">Главные</p>
+                            <p class="news__header" name="header" data-menu="my" id="my">Мой выбор</p>
+                            <p class="news__header" name="header" data-menu="save" id="save">Сохранённые</p>
+                        </nav>
+                        <div class="news__items" id="items"></div>
+                    </div>
+                </div>
 
-
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/f9f859d783.js"></script>
     <script src="./js/news.js" defer></script>
 </body>
 

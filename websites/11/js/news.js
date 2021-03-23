@@ -20,7 +20,7 @@ class News {
 
         document.getElementById("window").addEventListener('click', (evt) => {
             let e = evt.target;
-            this.renderNews(e.dataset.menu);
+            if (evt.y <= 110) { this.renderNews(e.dataset.menu); }
         })
     }
     _init() {
@@ -53,8 +53,6 @@ class News {
 
     renderNews(type) {
         let str = '';
-
-
         document.querySelector('.news__header_selected').classList.remove('news__header_selected');
         document.getElementById(type).classList.add('news__header_selected');
         if (type == 'all') {
@@ -68,42 +66,57 @@ class News {
         }
         this.items.innerHTML = '';
         str = '';
-        this.allNews.forEach((e) => {
 
-            if ((e.main == this.typeSearch1) || (e.main == this.typeSearch2)) {
-                str = str +
-                    `<div class="news__item">
-                    <p class="news__pic">
-                        <img class="news__img" alt="${e.article}" src="img/news/${e.img}">
-                    </p>
-                    <div class="news__data">
-                        <div class="news__text">
-                            <a class="news__article ${(!e.readed) ? 'news__article_bold' : ''}" href="${e.link}">${e.article}</a>
-                            <div class="news__symbols">
-                                <p class="news__save">
-                                    <span class="fa fa-bookmark-o" aria-hidden="true" id="${e.news_id}></span>
-                                </p>
-                                <p class="news__readed ${(e.readed) ? 'news__readed_green' : ''}">
-                                    <span class="news__readed ${(e.readed) ? 'news__readed_green' : ''} fa fa-check" aria-hidden="true"></span>
-                                </p>
+        if (type == 'all' || type == 'main') {
+            this.allNews.forEach((e) => {
+                if ((e.main == this.typeSearch1) || (e.main == this.typeSearch2)) {
+                    str = str +
+                        `<div class="news__item">
+                        <p class="news__pic">
+                            <img class="news__img" alt="${e.article}" src="img/news/${e.img}">
+                        </p>
+                        <div class="news__data">
+                            <div class="news__text">
+                                <a class="news__article ${(!e.readed) ? 'news__article_bold' : ''}" href="${e.link}">${e.article}</a>
+                                <div class="news__symbols">
+                                    <p class="news__save">
+                                        <span class="fa fa-bookmark-o" aria-hidden="true" id="${e.news_id}></span>
+                                    </p>
+                                    <p class="news__readed ${(e.readed) ? 'news__readed_green' : ''}">
+                                        <span class="news__readed ${(e.readed) ? 'news__readed_green' : ''} fa fa-check" aria-hidden="true"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="news__info">
+                                <p class="news__author">${e.author}</p>
+                                <p class="news__category">//${this.allCategories[e.cat_id].name}</p>
+                                <p class="news__date">${e.date}</p>
                             </div>
                         </div>
-                        <div class="news__info">
-                            <p class="news__author">${e.author}</p>
-                            <p class="news__category">//${this.allCategories[e.cat_id].name}</p>
-                            <p class="news__date">${e.date}</p>
-                        </div>
-                    </div>
-                </div>`;
+                    </div>`;
+                }
+            });
+        }
+
+        if (type == 'my') {
+            if (this.myNews.length == 0) {
+                let strStart = `<h3>Укажите интересующие вас категории, чтобы только по ним просматривать новости</h3>`;
+                let strCat = '';
+
+                this.allCategories.forEach((e) => {
+                    strCat = strCat + `<p><input type="checkbox" name="{e.id}"><label for="${e.id}"> ${e.name}</label></p>`
+                });
+
+                let strEnd = `<button id="btnmynews"> Показать новости</button>`;
+                str = strStart + strCat + strEnd;
+            } else {
+                console.log('Мои новости');
             }
-        })
+        }
+
         this.items.innerHTML = '';
         this.items.insertAdjacentHTML('beforeend', str);
 
     }
-
-    // this.allNews.forEach((e) => { })
-
-
 }
 let testResult = new News();

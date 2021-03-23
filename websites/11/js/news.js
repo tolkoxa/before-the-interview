@@ -21,7 +21,7 @@ class News {
         document.getElementById("window").addEventListener('click', (evt) => {
             let e = evt.target;
             if (e.name == 'header') { this.renderNews(e.dataset.menu); }
-        })
+        });
     }
     _init() {
         this.getCategories();
@@ -42,7 +42,8 @@ class News {
     }
 
     renderCount(count) {
-        this.numberid.classList.toggle('invisible');
+        this.numberid.classList.remove('invisible');
+        this.numberid.innerHTML = '';
         this.numberid.insertAdjacentHTML('beforeend', count);
 
         let Data = new Date(),
@@ -71,19 +72,19 @@ class News {
             this.allNews.forEach((e) => {
                 if ((e.main == this.typeSearch1) || (e.main == this.typeSearch2)) {
                     str = str +
-                        `<div class="news__item">
+                        `<div class="news__item"">
                         <p class="news__pic">
                             <img class="news__img" alt="${e.article}" src="img/news/${e.img}">
                         </p>
                         <div class="news__data">
                             <div class="news__text">
-                                <a class="news__article ${(!e.readed) ? 'news__article_bold' : ''}" href="${e.link}">${e.article}</a>
+                                <a class="news__article ${(!e.readed) ? 'news__article_bold' : ''}" href="${e.link}" id="a${e.news_id}">${e.article}</a>
                                 <div class="news__symbols">
                                     <p class="news__save">
-                                        <span class="fa fa-bookmark-o" aria-hidden="true" id="${e.news_id}></span>
+                                        <span class="fa fa-bookmark-o" aria-hidden="true" id="s${e.news_id}"></span>
                                     </p>
                                     <p class="news__readed ${(e.readed) ? 'news__readed_green' : ''}">
-                                        <span class="news__readed ${(e.readed) ? 'news__readed_green' : ''} fa fa-check" aria-hidden="true"></span>
+                                        <span class="news__readed ${(e.readed) ? 'news__readed_green' : ''} fa fa-check" aria-hidden="true" id="r${e.news_id}" onclick="testResult.readNews(${e.news_id})"></span>
                                     </p>
                                 </div>
                             </div>
@@ -104,11 +105,25 @@ class News {
                 let strCat = '';
 
                 this.allCategories.forEach((e) => {
-                    strCat = strCat + `<p><input type="checkbox" name="{e.id}"><label for="${e.id}"> ${e.name}</label></p>`
+                    strCat = strCat + `<p><input type="checkbox" name="${e.id}" value="${e.id}"><label for="${e.id}"> ${e.name}</label></p>`
                 });
 
                 let strEnd = `<button id="btnmynews"> Показать новости</button>`;
                 str = strStart + strCat + strEnd;
+
+                setTimeout(() => {
+                    document.getElementById("btnmynews").addEventListener('click', (evt) => {
+                        evt.preventDefault();
+                        let checkArr = document.querySelectorAll('input.checkbox:checked');
+                        let myNewsArr = Array.from(checkArr).map(cb => cb.value);
+                        console.log(checkArr);
+                        console.log(myNewsArr);
+                        return myNewsArr;
+
+                    });
+
+                }, 1000);
+
             } else {
                 console.log('Мои новости');
             }
@@ -117,6 +132,17 @@ class News {
         this.items.innerHTML = '';
         this.items.insertAdjacentHTML('beforeend', str);
 
+    }
+    readNews(id) {
+        document.getElementById(`a${id}`).classList.remove('news__article_bold');
+        document.getElementById(`r${id}`).classList.add('news__readed_green');
+        this.allNews.forEach((e) => {
+            if (e.news_id == id) {
+                e.readed = true;
+                this.count--;
+            };
+        });
+        testResult.renderCount(this.count);
     }
 }
 let testResult = new News();

@@ -20,7 +20,7 @@ class News {
 
         document.getElementById("window").addEventListener('click', (evt) => {
             let e = evt.target;
-            if (evt.y <= 110) { this.renderNews(e.dataset.menu); }
+            if (e.name == 'header') { this.renderNews(e.dataset.menu); }
         })
     }
     _init() {

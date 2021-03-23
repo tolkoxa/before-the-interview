@@ -129,10 +129,13 @@ body {
 }
 
 .news__header {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     color: $color-black;
-    padding: 0 5px 8px 5px;
+    padding: 0 3px 8px 3px;
+    border: none;
+    outline: none;
+    background-color: transparent;
     &_selected {
         border-bottom: 3px solid $color-black;
         padding-bottom: 5px;

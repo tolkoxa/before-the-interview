@@ -6,8 +6,10 @@ class News {
         this.myNews = [];
         this.saved = [];
         this.count = 0;
-        this.typeSearch1;
-        this.typeSearch2;
+        this.mainSearch1;
+        this.mainSearch2;
+        this.saveSearch1 = true;
+        this.saveSearch2 = false;
         this.numberid = document.getElementById('number');
         this.items = document.getElementById('items');
 
@@ -63,20 +65,28 @@ class News {
         document.querySelector('.news__header_selected').classList.remove('news__header_selected');
         document.getElementById(type).classList.add('news__header_selected');
         if (type == 'all') {
-            this.typeSearch1 = true;
-            this.typeSearch2 = false;
+            this.mainSearch1 = true;
+            this.mainSearch2 = false;
+            this.saveSearch1 = true;
+            this.saveSearch2 = false;
         } else if (type == 'main') {
-            this.typeSearch1 = true;
-            this.typeSearch2 = true;
-        } else if (type == 'my') {
-            if (this.myNews.length == 0) {}
+            this.mainSearch1 = true;
+            this.mainSearch2 = true;
+            this.saveSearch1 = true;
+            this.saveSearch2 = false;
+        } else if (type == 'save') {
+            this.mainSearch1 = true;
+            this.mainSearch2 = false;
+            this.saveSearch1 = true;
+            this.saveSearch2 = true;
         }
         this.items.innerHTML = '';
         str = '';
 
-        if (type == 'all' || type == 'main') {
+        if (type != 'my') {
+
             this.allNews.forEach((e) => {
-                if ((e.main == this.typeSearch1) || (e.main == this.typeSearch2)) {
+                if (((e.main == this.mainSearch1) || (e.main == this.mainSearch2)) && (e.saved == this.saveSearch1) || (e.saved == this.saveSearch2)) {
                     str = str +
                         `<div class="news__item"">
                         <p class="news__pic">
@@ -87,7 +97,7 @@ class News {
                                 <a class="news__article ${(!e.readed) ? 'news__article_bold' : ''}" href="${e.link}" id="a${e.news_id}">${e.article}</a>
                                 <div class="news__symbols">
                                     <p class="news__save">
-                                        <span class="fa fa-bookmark-o" aria-hidden="true" id="s${e.news_id}"></span>
+                                        <span class="fa fa-bookmark-o" aria-hidden="true" id="s${e.news_id}" onclick="testResult.saveNews(${e.news_id})"></span>
                                     </p>
                                     <p class="news__readed ${(e.readed) ? 'news__readed_green' : ''}">
                                         <span class="news__readed ${(e.readed) ? 'news__readed_green' : ''} fa fa-check" aria-hidden="true" id="r${e.news_id}" onclick="testResult.readNews(${e.news_id})"></span>
@@ -149,6 +159,15 @@ class News {
             };
         });
         testResult.renderCount(this.count);
+    }
+    saveNews(id) {
+        document.getElementById(`s${id}`).classList.remove('fa-bookmark-o');
+        document.getElementById(`s${id}`).classList.add('fa-bookmark');
+        this.allNews.forEach((e) => {
+            if (e.news_id == id) {
+                e.saved = true;
+            };
+        });
     }
 }
 let testResult = new News();

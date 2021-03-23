@@ -42,13 +42,19 @@ class News {
     }
 
     renderCount(count) {
-        this.numberid.classList.remove('invisible');
+        if (count > 0) {
+            this.numberid.classList.remove('invisible');
+        } else {
+            this.numberid.classList.add('invisible');
+        }
         this.numberid.innerHTML = '';
         this.numberid.insertAdjacentHTML('beforeend', count);
 
         let Data = new Date(),
             Hour = Data.getHours(),
             Minutes = Data.getMinutes();
+        (Hour < 10) ? Hour = `0${Hour}`: Hour = Hour;
+        (Minutes < 10) ? Minutes = `0${Minutes}`: Minutes = Minutes;
         document.getElementById('time').innerHTML = `${Hour}:${Minutes}`;
     }
 

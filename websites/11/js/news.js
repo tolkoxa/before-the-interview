@@ -6,14 +6,22 @@ class News {
         this.myNews = [];
         this.saved = [];
         this.count = 0;
+        this.typeSearch1;
+        this.typeSearch2;
         this.numberid = document.getElementById('number');
+        this.items = document.getElementById('items');
 
 
         document.getElementById("newnews").addEventListener('click', (evt) => {
             evt.preventDefault();
             document.getElementById("window").classList.toggle("invisible");
-            this.renderWindow();
+            this.renderNews('all');
         });
+
+        document.getElementById("window").addEventListener('click', (evt) => {
+            let e = evt.target;
+            this.renderNews(e.dataset.menu);
+        })
     }
     _init() {
         this.getCategories();
@@ -27,9 +35,7 @@ class News {
     async getNews() {
         let response = await fetch('data/news.json');
         this.allNews = await response.json();
-        console.log(this.allNews);
         this.allNews.forEach((item) => {
-            console.log(item.readed);
             (!item.readed) ? this.count++: this.count + 0;
         });
         this.renderCount(this.count);
@@ -39,38 +45,65 @@ class News {
         this.numberid.classList.toggle('invisible');
         this.numberid.insertAdjacentHTML('beforeend', count);
 
+        let Data = new Date(),
+            Hour = Data.getHours(),
+            Minutes = Data.getMinutes();
+        document.getElementById('time').innerHTML = `${Hour}:${Minutes}`;
     }
 
-    renderWindow() {
+    renderNews(type) {
+        let str = '';
+
+
+        document.querySelector('.news__header_selected').classList.remove('news__header_selected');
+        document.getElementById(type).classList.add('news__header_selected');
+        if (type == 'all') {
+            this.typeSearch1 = true;
+            this.typeSearch2 = false;
+        } else if (type == 'main') {
+            this.typeSearch1 = true;
+            this.typeSearch2 = true;
+        } else if (type == 'my') {
+            if (this.myNews.length == 0) {}
+        }
+        this.items.innerHTML = '';
+        str = '';
         this.allNews.forEach((e) => {
 
+            if ((e.main == this.typeSearch1) || (e.main == this.typeSearch2)) {
+                str = str +
+                    `<div class="news__item">
+                    <p class="news__pic">
+                        <img class="news__img" alt="${e.article}" src="img/news/${e.img}">
+                    </p>
+                    <div class="news__data">
+                        <div class="news__text">
+                            <a class="news__article ${(!e.readed) ? 'news__article_bold' : ''}" href="${e.link}">${e.article}</a>
+                            <div class="news__symbols">
+                                <p class="news__save">
+                                    <span class="fa fa-bookmark-o" aria-hidden="true" id="${e.news_id}></span>
+                                </p>
+                                <p class="news__readed ${(e.readed) ? 'news__readed_green' : ''}">
+                                    <span class="news__readed ${(e.readed) ? 'news__readed_green' : ''} fa fa-check" aria-hidden="true"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="news__info">
+                            <p class="news__author">${e.author}</p>
+                            <p class="news__category">//${this.allCategories[e.cat_id].name}</p>
+                            <p class="news__date">${e.date}</p>
+                        </div>
+                    </div>
+                </div>`;
+            }
         })
+        this.items.innerHTML = '';
+        this.items.insertAdjacentHTML('beforeend', str);
+
     }
 
-    renderNews() {
-        let str = `<div class="news__item">
-        <p class="news__pic">
-            <img class="news__img" alt="Новости">
-        </p>
-        <div class="news__data">
-            <div class="news__text">
-                <a class="news__article" href="#">Прокуратура начала проверку из-за ЧП с попавшими под лавину в Хибинах</a>
-                <div class="news__symbols">
-                    <p class="news__save">
-                        <span class="fa fa-bookmark-o" aria-hidden="true"></span>
-                    </p>
-                    <p class="news__readed">
-                        <span class="fa fa-check" aria-hidden="true"></span>
-                    </p>
-                </div>
-            </div>
-            <div class="news__info">
-                <p class="news__author">Иван К.</p>
-                <p class="news__category">//Культура</p>
-                <p class="news__date">22.02.2021 21:38</p>
-            </div>
-        </div>
-    </div>`;
-    }
+    // this.allNews.forEach((e) => { })
+
+
 }
 let testResult = new News();

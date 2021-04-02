@@ -79,10 +79,6 @@ body {
     color: #222831;
     padding-right: 15px;
     padding-bottom: 5px; }
-  .intro__line {
-    width: 73px;
-    height: 2px;
-    background: #222831; }
   .intro__texts {
     display: flex;
     width: 100%;
@@ -103,6 +99,16 @@ body {
     font-size: 2rem;
     line-height: 3rem;
     color: #6A6A6A; }
+
+.section__line {
+  width: 73px;
+  height: 2px; }
+
+.section__line_black {
+  background: #222831; }
+
+.section__line_white {
+  background: #fff; }
 
 .slider {
   padding-bottom: 112px; }
@@ -223,7 +229,6 @@ body {
       transform: rotate(-55deg); }
   .spaces__slider {
     width: 100%;
-    padding-bottom: 112px;
     overflow: hidden; }
   .spaces__items {
     width: 1460px;
@@ -245,9 +250,7 @@ body {
       font-weight: 400;
       font-size: 3.2rem;
       line-height: 4.1rem;
-      /* identical to box height */
-      /* Color / White */
-      color: #FFFFFF; }
+      color: #fff; }
     .spaces__item:hover {
       cursor: pointer;
       background-color: #10375C; }
@@ -398,3 +401,65 @@ body {
   font-weight: 400;
   line-height: 1.4rem;
   color: #222831; }
+
+.why {
+  display: flex;
+  padding-bottom: 112px; }
+  .why__icons {
+    width: 570px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 36px 71px 32px 6px; }
+    .why__icons_item {
+      min-width: 200px;
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 64px; }
+      .why__icons_item:nth-last-of-type(-n+2) {
+        padding-bottom: 0px; }
+  .why__icons-text {
+    padding-left: 24px; }
+  .why__number {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4.1rem;
+    color: #10375C;
+    padding-bottom: 8px; }
+  .why__number-text {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: #9A9A9A; }
+  .why__texts {
+    width: 540px;
+    padding: 54px;
+    background-color: #10375C; }
+  .why__section {
+    display: flex;
+    align-items: center; }
+  .why__name {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #fff;
+    padding-right: 15px;
+    padding-bottom: 8px; }
+  .why__title {
+    width: 433px;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.1rem;
+    color: #fff;
+    padding-bottom: 24px; }
+  .why__text {
+    width: 433px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #fff; }

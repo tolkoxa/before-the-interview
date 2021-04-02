@@ -89,10 +89,6 @@ body {
     }
 }
 
-.main {
-    &-style {}
-}
-
 .intro {
     padding-bottom: 33px;
     &_text-line {
@@ -107,11 +103,6 @@ body {
         color: $color-black;
         padding-right: 15px;
         padding-bottom: 5px;
-    }
-    &__line {
-        width: 73px;
-        height: 2px;
-        background: $color-black;
     }
     &__texts {
         display: flex;
@@ -139,6 +130,19 @@ body {
     }
 }
 
+.section__line {
+    width: 73px;
+    height: 2px;
+}
+
+.section__line_black {
+    background: $color-black;
+}
+
+.section__line_white {
+    background: $color-white;
+}
+
 .slider {
     padding-bottom: 112px;
     &_items {
@@ -146,12 +150,10 @@ body {
         overflow: hidden;
     }
     &_item {}
-    // .slider__box
     &__box {
         width: 100%;
         position: relative;
     }
-    // .slider__pag
     &__pag {
         position: absolute;
         bottom: 38px;
@@ -278,10 +280,8 @@ body {
             transform: rotate(-55deg);
         }
     }
-    // .spaces__slider
     &__slider {
         width: 100%;
-        padding-bottom: 112px;
         overflow: hidden;
     }
     &__items {
@@ -306,9 +306,7 @@ body {
             font-weight: 400;
             font-size: 3.2rem;
             line-height: 4.1rem;
-            /* identical to box height */
-            /* Color / White */
-            color: #FFFFFF;
+            color: $color-white;
         }
         &:hover {
             cursor: pointer;
@@ -389,7 +387,6 @@ body {
         &_hover-text {
             display: none;
         }
-        // .spaces__item_buttons
         &_buttons {
             position: absolute;
             bottom: 50px;
@@ -436,7 +433,6 @@ body {
                 transform: rotate(-45deg);
             }
         }
-        // .spaces__item_text
         &_text {
             width: 100%;
             height: 50px;
@@ -451,7 +447,6 @@ body {
             color: $color-black;
         }
     }
-    // .spaces__slider-pagination
     &__slider-pagination {
         width: 160px;
         margin: 0 auto;
@@ -460,22 +455,18 @@ body {
 }
 
 .pag {
-    // .pag__lines
     &__lines {
         display: flex;
         padding-bottom: 7px;
     }
-    // .pag__line
     &__line {
         width: 40px;
         height: 4px;
         background-color: $color-grey-line;
-        // .pag__line_active
         &_active {
             background-color: $color-red;
         }
     }
-    // .pag__numbs
     &__numbs {
         text-align: center;
         font-family: $font-lato;
@@ -497,5 +488,80 @@ body {
         font-weight: 400;
         line-height: 1.4rem;
         color: $color-black;
+    }
+}
+
+.why {
+    display: flex;
+    padding-bottom: 112px;
+    &__icons {
+        width: 570px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 36px 71px 32px 6px;
+        &_item {
+            min-width: 200px;
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 64px;
+            &:nth-last-of-type(-n+2) {
+                padding-bottom: 0px;
+            }
+        }
+    }
+    &__icon {}
+    &__icons-text {
+        padding-left: 24px;
+    }
+    &__number {
+        font-family: $font-lora;
+        font-weight: 400;
+        font-size: 3.2rem;
+        line-height: 4.1rem;
+        color: $color-main;
+        padding-bottom: 8px;
+    }
+    &__number-text {
+        font-family: $font-lato;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color: $color-grey_light;
+    }
+    &__texts {
+        width: 540px;
+        padding: 54px;
+        background-color: $color-main;
+    }
+    &__section {
+        display: flex;
+        align-items: center;
+    }
+    &__name {
+        font-family: $font-lato;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: $color-white;
+        padding-right: 15px;
+        padding-bottom: 8px;
+    }
+    &__title {
+        width: 433px;
+        font-family: $font-lora;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 5.1rem;
+        color: $color-white;
+        padding-bottom: 24px;
+    }
+    &__text {
+        width: 433px;
+        font-family: $font-lato;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: $color-white;
     }
 }

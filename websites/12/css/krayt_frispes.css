@@ -126,11 +126,13 @@ body {
 .slider {
   padding-bottom: 112px; }
   .slider_items {
+    width: 4440px;
     display: flex;
-    overflow: hidden; }
+    transition: 0.5s; }
   .slider__box {
-    width: 100%;
-    position: relative; }
+    width: 1110px;
+    position: relative;
+    overflow: hidden; }
   .slider__pag {
     position: absolute;
     bottom: 38px;
@@ -143,13 +145,19 @@ body {
     height: 4px;
     background: #fff;
     opacity: 0.5;
-    margin: 0 2px; }
+    margin: 0 2px;
+    border: none;
+    outline: none;
+    transition: 0.5s; }
     .slider__pag-item:hover {
       cursor: pointer; }
     .slider__pag-item_active {
       width: 40px;
       height: 4px;
-      background: #FF5722; }
+      background: #FF5722;
+      border: none;
+      outline: none;
+      transition: 0.5s; }
 
 .spaces {
   padding-bottom: 112px; }
@@ -524,16 +532,22 @@ body {
         z-index: -1; }
   .facilities__imgs {
     width: 729px;
-    height: 453px; }
+    height: 453px;
+    transition: 0.4s; }
     .facilities__imgs_1 {
+      transition: 0.4s;
       background-image: url("../img/facilities/facilities-01.png"); }
     .facilities__imgs_2 {
+      transition: 0.4s;
       background-image: url("../img/facilities/facilities-02.png"); }
     .facilities__imgs_3 {
+      transition: 0.4s;
       background-image: url("../img/facilities/facilities-03.png"); }
     .facilities__imgs_4 {
+      transition: 0.4s;
       background-image: url("../img/facilities/facilities-04.png"); }
     .facilities__imgs_5 {
+      transition: 0.4s;
       background-image: url("../img/facilities/facilities-05.png"); }
 
 .gallery {

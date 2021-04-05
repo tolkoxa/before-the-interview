@@ -163,13 +163,15 @@ body {
 .slider {
     padding-bottom: 112px;
     &_items {
+        width: 4440px;
         display: flex;
-        overflow: hidden;
+        transition: 0.5s;
     }
     &_item {}
     &__box {
-        width: 100%;
+        width: 1110px;
         position: relative;
+        overflow: hidden;
     }
     &__pag {
         position: absolute;
@@ -185,6 +187,9 @@ body {
         background: $color-white;
         opacity: 0.5;
         margin: 0 2px;
+        border: none;
+        outline: none;
+        transition: 0.5s;
         &:hover {
             cursor: pointer;
         }
@@ -192,6 +197,9 @@ body {
             width: 40px;
             height: 4px;
             background: $color-orange;
+            border: none;
+            outline: none;
+            transition: 0.5s;
         }
     }
 }
@@ -612,6 +620,7 @@ body {
         background-color: transparent;
         outline: none;
         text-align: left;
+        // transition: 0.2s;
         &:hover {
             cursor: pointer;
             position: relative;
@@ -638,19 +647,25 @@ body {
     &__imgs {
         width: 729px;
         height: 453px;
+        transition: 0.4s;
         &_1 {
+            transition: 0.4s;
             background-image: url('../img/facilities/facilities-01.png');
         }
         &_2 {
+            transition: 0.4s;
             background-image: url('../img/facilities/facilities-02.png');
         }
         &_3 {
+            transition: 0.4s;
             background-image: url('../img/facilities/facilities-03.png');
         }
         &_4 {
+            transition: 0.4s;
             background-image: url('../img/facilities/facilities-04.png');
         }
         &_5 {
+            transition: 0.4s;
             background-image: url('../img/facilities/facilities-05.png');
         }
     }

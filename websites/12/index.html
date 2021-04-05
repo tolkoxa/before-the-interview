@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="tolkoxa.ru">
-    <meta property="vk:image" content="./img/snippet.jpg">
-    <meta property="twitter:image" content="./img/snippet.jpg">
-    <meta property="og:image" content="./img/snippet.jpg">
+    <meta property="vk:image" content="./img/files/cover-og-krayt.png">
+    <meta property="twitter:image" content="./img/files/cover-og-krayt.png">
+    <meta property="og:image" content="./img/files/cover-og-krayt.png">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="315">
     <meta property="og:title" content="Frispes. Решение тестового задания от Андрея Халимоненко для Krayt">
@@ -24,8 +24,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet ">
-    <link rel="image_src " href="./img/snippet.jpg ">
-    <link rel="shortcut icon " href="img/favicon.ico " type="image/x-icon ">
+    <link rel="image_src " href="./img/files/cover-og-krayt.png">
+    <link rel="shortcut icon " href="favicon.ico " type="image/x-icon ">
 
     <link rel="stylesheet " href="css/krayt_frispes.css ">
 </head>
@@ -62,7 +62,7 @@
             </section>
             <section class="slider container" aria-label="slider">
                 <div class="slider__box">
-                    <div class="slider_items">
+                    <div class="slider_items" id="sliderintro">
                         <div class="slider_item">
                             <img src="img/intro/intro-slider-01.png" alt="slider">
                         </div>
@@ -77,10 +77,10 @@
                         </div>
                     </div>
                     <div class="slider__pag" id="intropag">
-                        <div class="slider__pag-item slider__pag-item_active"></div>
-                        <div class="slider__pag-item"></div>
-                        <div class="slider__pag-item"></div>
-                        <div class="slider__pag-item"></div>
+                        <button class="slider__pag-item slider__pag-item_active" name="intropag" data-slider="1" id="slider1"></button>
+                        <button class="slider__pag-item" name="intropag" data-slider="2" id="slider2"></button>
+                        <button class="slider__pag-item" name="intropag" data-slider="3" id="slider3"></button>
+                        <button class="slider__pag-item" name="intropag" data-slider="4" id="slider4"></button>
                     </div>
                 </div>
             </section>
@@ -232,14 +232,14 @@
                 </div>
                 <h2 class="section__title facilities__title section__title_color-main">All facilities are designed to meet all your needs</h2>
                 <div class="facilities__content">
-                    <div class="facilities__menu">
-                        <button class="facilities__menu-item facilities__menu-item_active">Spacious parking area</button>
-                        <button class="facilities__menu-item">Comfortable spaces</button>
-                        <button class="facilities__menu-item">Cozy cafe</button>
-                        <button class="facilities__menu-item">Child playground</button>
-                        <button class="facilities__menu-item">Outdoor spaces</button>
+                    <div class="facilities__menu" id="facmenu">
+                        <button class="facilities__menu-item facilities__menu-item_active" name="facmenu" data-fac="1" id="fac1">Spacious parking area</button>
+                        <button class="facilities__menu-item" name="facmenu" data-fac="2" id="fac2">Comfortable spaces</button>
+                        <button class="facilities__menu-item" name="facmenu" data-fac="3" id="fac3">Cozy cafe</button>
+                        <button class="facilities__menu-item" name="facmenu" data-fac="4" id="fac4">Child playground</button>
+                        <button class="facilities__menu-item" name="facmenu" data-fac="5" id="fac5">Outdoor spaces</button>
                     </div>
-                    <div class="facilities__imgs facilities__imgs_1"></div>
+                    <div class="facilities__imgs facilities__imgs_1" id="fotofac"></div>
                 </div>
             </section>
             <section class="gallery" aria-label="gallery">

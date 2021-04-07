@@ -14,6 +14,7 @@ body {
     width: 320px;
     margin: 0 auto;
     border: 1px solid;
+    overflow: hidden;
 }
 
 .container {
@@ -153,7 +154,8 @@ body {
 
 .text-1 {
     text-align: right;
-    padding-bottom: 20px;
+    padding-bottom: 162px;
+    // padding-top: 142px;
     &__title {
         font-family: $font-inglobal;
         font-size: 2.4rem;
@@ -168,5 +170,154 @@ body {
         font-size: 1.6rem;
         line-height: 1.8rem;
         color: $color-text;
+    }
+}
+
+.form {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        top: -125px;
+        left: -110px;
+        width: 218px;
+        height: 204px;
+        background-image: url('../img/form/elements/hat.png');
+    }
+    &__elements-left {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            top: -125px;
+            left: 20px;
+            width: 114px;
+            height: 72px;
+            background-image: url('../img/form/elements/monocle.png');
+            background-position: center center;
+            z-index: -2;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: -100px;
+            left: 140px;
+            width: 98px;
+            height: 55px;
+            background-image: url('../img/form/elements/pipe.png');
+            background-position: center center;
+            z-index: -2;
+        }
+    }
+    &__elements-right {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            top: -75px;
+            left: 187px;
+            width: 54px;
+            height: 45px;
+            background-image: url('../img/form/elements/cup.png');
+            background-position: center center;
+            z-index: -2;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: -73px;
+            right: -33px;
+            width: 102px;
+            height: 82px;
+            background-image: url('../img/form/elements/teapot.png');
+            background-position: center center;
+            z-index: -2;
+        }
+    }
+    &__style {
+        width: 100%;
+        height: 460px;
+        background-color: $color-white;
+        border: 1px solid $color-grey-line;
+        padding-top: 53px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        &::before {
+            content: '';
+            background-image: url('../img/form/flag-gift.png');
+            background-position: center bottom;
+            position: absolute;
+            top: -90px;
+            left: 36px;
+            width: 248px;
+            height: 97px;
+            z-index: -1;
+        }
+    }
+    &__title {
+        font-family: $font-open;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-text-grey;
+        padding-bottom: 8px;
+    }
+    &__text {
+        font-family: $font-open;
+        color: $color-text-grey;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    &__inputs {
+        width: 240px;
+        height: 94px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__input {
+        width: 240px;
+        height: 40px;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        border: 1px solid $color-grey-line;
+        background-color: $color-white;
+        padding: 16px 0px 15px 14px;
+        color: $color-grey-input;
+        font-family: $font-open;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 2.4;
+        text-align: left;
+    }
+    &__button {
+        padding-top: 20px;
+        padding-bottom: 29px;
+    }
+    &__btn {
+        width: 240px;
+        height: 40px;
+        box-shadow: inset 0 -2px 0 #0568b5;
+        border-radius: 4px;
+        background-color: $color-blue;
+        border: none;
+        outline: none;
+        color: $color-white;
+        font-family: $font-open;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        text-align: center;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

@@ -145,6 +145,10 @@ body {
         &_red {
             color: $color-red;
         }
+        &_blue {
+            color: $color-blue;
+            width: 85px;
+        }
     }
 }
 
@@ -238,7 +242,7 @@ body {
         width: 100%;
         height: 460px;
         background-color: $color-white;
-        border: 1px solid $color-grey-line;
+        border-top: 1px solid $color-grey-line;
         padding-top: 53px;
         margin: 0 auto;
         display: flex;
@@ -279,6 +283,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
     }
     &__input {
         width: 240px;
@@ -294,6 +299,7 @@ body {
         font-weight: 700;
         line-height: 2.4;
         text-align: left;
+        margin-bottom: 14px;
     }
     &__button {
         padding-top: 20px;
@@ -320,4 +326,50 @@ body {
             cursor: pointer;
         }
     }
+    &__tel {
+        color: $color-blue;
+        font-family: $font-open;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 3.6rem;
+        padding-bottom: 45px;
+    }
+}
+
+.clients {
+    width: 100%;
+    min-height: 300px;
+    background-image: url('../img/clients/bg-wood_mobile.jpg');
+    &__title {
+        background-clip: text;
+        color: linear-gradient(180deg, #dec8a8 0%, #b76c00 100%);
+        text-shadow: 0 1px 1px $color-white;
+        font-family: $font-inglobal;
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+    }
+    // .clients__items
+    &__items {}
+    // .client__item
+    &__item {}
+    // .client__logo-1
+    &__logo-1 {}
+    // .client__logo-2
+    &__logo-2 {}
+    // .client__logo-3
+    &__logo-3 {}
+    // .client__logo-4
+    &__logo-4 {}
+    // .client__logo-5
+    &__logo-5 {}
+    // .client__logo-6
+    &__logo-6 {}
+    // .client__logo-7
+    &__logo-7 {}
+    // .client__logo-8
+    &__logo-8 {}
 }

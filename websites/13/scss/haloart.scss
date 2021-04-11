@@ -352,24 +352,52 @@ body {
         line-height: normal;
         text-align: left;
     }
-    // .clients__items
-    &__items {}
-    // .client__item
-    &__item {}
-    // .client__logo-1
-    &__logo-1 {}
-    // .client__logo-2
+    &__items {
+        position: relative;
+        z-index: 1;
+    }
+    &__item_1 {
+        width: 94px;
+        height: 110px;
+        background-image: url('../img/clients/logos/mobile/note-1.png');
+        background-position: center center;
+        position: absolute;
+        top: 113px;
+        left: -13px;
+        padding-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    &__logo-1 {
+        width: 62px;
+        height: 56px;
+    }
+    &__item_2 {
+        width: 103px;
+        height: 98px;
+        background-image: url('../img/clients/logos/mobile/note-2.png');
+        background-position: center center;
+        position: absolute;
+        top: 62px;
+        left: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
     &__logo-2 {}
-    // .client__logo-3
+    &__item_3 {}
     &__logo-3 {}
-    // .client__logo-4
+    &__item_4 {}
     &__logo-4 {}
-    // .client__logo-5
+    &__item_5 {}
     &__logo-5 {}
-    // .client__logo-6
+    &__item_6 {}
     &__logo-6 {}
-    // .client__logo-7
+    &__item_7 {}
     &__logo-7 {}
-    // .client__logo-8
+    &__item_8 {}
     &__logo-8 {}
 }

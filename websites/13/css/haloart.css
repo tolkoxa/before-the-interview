@@ -299,3 +299,34 @@ body {
     letter-spacing: normal;
     line-height: normal;
     text-align: left; }
+  .clients__items {
+    position: relative;
+    z-index: 1; }
+  .clients__item_1 {
+    width: 94px;
+    height: 110px;
+    background-image: url("../img/clients/logos/mobile/note-1.png");
+    background-position: center center;
+    position: absolute;
+    top: 113px;
+    left: -13px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; }
+  .clients__logo-1 {
+    width: 62px;
+    height: 56px; }
+  .clients__item_2 {
+    width: 103px;
+    height: 98px;
+    background-image: url("../img/clients/logos/mobile/note-2.png");
+    background-position: center center;
+    position: absolute;
+    top: 62px;
+    left: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; }

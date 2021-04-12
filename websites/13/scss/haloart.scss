@@ -340,6 +340,7 @@ body {
     width: 100%;
     min-height: 300px;
     background-image: url('../img/clients/bg-wood_mobile.jpg');
+    position: relative;
     &__title {
         background-clip: text;
         color: linear-gradient(180deg, #dec8a8 0%, #b76c00 100%);
@@ -351,6 +352,10 @@ body {
         letter-spacing: normal;
         line-height: normal;
         text-align: left;
+        position: absolute;
+        top: 66px;
+        left: 108px;
+        width: 140px;
     }
     &__items {
         position: relative;
@@ -363,8 +368,7 @@ body {
         background-position: center center;
         position: absolute;
         top: 113px;
-        left: -13px;
-        padding-top: 5px;
+        left: -16px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -380,24 +384,117 @@ body {
         background-image: url('../img/clients/logos/mobile/note-2.png');
         background-position: center center;
         position: absolute;
-        top: 62px;
-        left: 13px;
+        top: 54px;
+        left: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+    &__logo-2 {
+        width: 55px;
+        height: 31px;
+    }
+    &__item_3 {
+        width: 100px;
+        height: 103px;
+        background-image: url('../img/clients/logos/mobile/note-3.png');
+        background-position: center center;
+        position: absolute;
+        top: 166px;
+        left: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 2;
     }
-    &__logo-2 {}
-    &__item_3 {}
-    &__logo-3 {}
-    &__item_4 {}
-    &__logo-4 {}
-    &__item_5 {}
-    &__logo-5 {}
-    &__item_6 {}
-    &__logo-6 {}
-    &__item_7 {}
-    &__logo-7 {}
-    &__item_8 {}
-    &__logo-8 {}
+    &__logo-3 {
+        width: 68px;
+        height: 18px;
+    }
+    &__item_4 {
+        width: 103px;
+        height: 113px;
+        background-image: url('../img/clients/logos/mobile/note-4.png');
+        background-position: center center;
+        position: absolute;
+        top: 100px;
+        left: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+    &__logo-4 {
+        width: 61px;
+        height: 25px;
+    }
+    &__item_5 {
+        width: 98px;
+        height: 104px;
+        background-image: url('../img/clients/logos/mobile/note-5.png');
+        background-position: center center;
+        position: absolute;
+        top: 170px;
+        left: 133px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    &__logo-5 {
+        width: 59px;
+        height: 13px;
+    }
+    &__item_6 {
+        width: 103px;
+        height: 101px;
+        background-image: url('../img/clients/logos/mobile/note-6.png');
+        background-position: center center;
+        position: absolute;
+        top: 108px;
+        left: 174px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+    &__logo-6 {
+        width: 40px;
+        height: 36px;
+    }
+    &__item_7 {
+        width: 105px;
+        height: 117px;
+        background-image: url('../img/clients/logos/mobile/note-7.png');
+        background-position: center center;
+        position: absolute;
+        top: 160px;
+        right: -18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    &__logo-7 {
+        width: 64px;
+        height: 32px;
+    }
+    &__item_8 {
+        width: 108px;
+        height: 108px;
+        background-image: url('../img/clients/logos/mobile/note-8.png');
+        background-position: center center;
+        position: absolute;
+        top: 39px;
+        right: -16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+    }
+    &__logo-8 {
+        width: 63px;
+        height: 39px;
+    }
 }

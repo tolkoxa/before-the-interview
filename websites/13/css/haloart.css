@@ -477,3 +477,7 @@ body {
     margin: 0 auto; }
   .form-discount__button {
     text-align: center; }
+
+.touch-after-mac {
+  padding-top: 15px;
+  padding-bottom: 55px; }
